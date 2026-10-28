@@ -1,9 +1,29 @@
-1. Object to store total price sold (if fraction, store in integer cents, display in 2dp); number of paid customers; total satisfaction of paid customers (to calculate average)
+1. Object to store total price sold (if fraction, display in 2dp)
 2. End of turn 18: total price >= $45; no. of paid customer >= 4 ; average satsifaction >= 60
+  - All met: Victory
+  - else: Defeat
 3. Each customer only order 1 item (randomly selected)
 4. The UI only collects the manager’s decisions and displays the state. Game rules belong in domain and control objects.
-5. Offline. All mandatory features must work without network access.
+5. All mandatory features must work without network access.
+6. Seeded randomness
+7. No ordering/ eating if not seated.
+
+Setting:
+1. 18 turns
+2. 2 tables
+3. 1 waiter (Wait; seat 1 queued customer at free table; take 1 order; serve 1 READY order); 1 chef (1 turn for salad and burger; 2 for pasta); 1 cashier (payment)
+  - waiter acts before chef
+    -  hence, dish finished this turn is served next turn the earliest.
+  - dish: READY when last prep unit is done, SERVED when served.
+  - READY_TO_PAY
+4. customer arrival: 1,4,7,10,13,16 (every 3n + 1 turns)
+
+Safisfaction calculation:
+- Arrives with 100
+- 
 
 START of each turn
-1. Print turn number; revenue; average satisfaction; waiting queue; occupied table; each customer's satisfaction; order status; staff tasks available. 
-2. 
+Print: turn number; revenue; average satisfaction; waiting queue; occupied table; each customer's satisfaction; order status; staff tasks available. 
+
+END of each turn
+Print: served count; unhappy departures; revenue; avg satisfaction of paid cust (if no payment yet, show N/A); turns used
