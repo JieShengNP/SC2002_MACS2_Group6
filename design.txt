@@ -1,0 +1,9 @@
+1. Object to store total price sold (if fraction, store in integer cents, display in 2dp); number of paid customers; total satisfaction of paid customers (to calculate average)
+2. End of turn 18: total price >= $45; no. of paid customer >= 4 ; average satsifaction >= 60
+3. Each customer only order 1 item (randomly selected)
+4. The UI only collects the manager’s decisions and displays the state. Game rules belong in domain and control objects.
+5. Offline. All mandatory features must work without network access.
+
+START of each turn
+1. Print turn number; revenue; average satisfaction; waiting queue; occupied table; each customer's satisfaction; order status; staff tasks available. 
+2. 
