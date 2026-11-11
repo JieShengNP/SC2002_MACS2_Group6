@@ -2,15 +2,20 @@ package restaurantrush.controller;
 
 import restaurantrush.entity.restaurant.Restaurant;
 
+import java.util.Random;
+
 public class GameController {
 
     public static final int MAX_TURNS = 18;
+    public static final long GAME_SEED = 2002L;
+    protected Random random;
 
-    private Restaurant restaurant;
+    private final Restaurant restaurant;
     private int turnNumber = 0;
 
     public GameController() {
         restaurant = new Restaurant();
+        random = new Random(GAME_SEED);
     }
 
     public Restaurant getRestaurant() {

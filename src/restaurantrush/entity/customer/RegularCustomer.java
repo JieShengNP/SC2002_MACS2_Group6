@@ -1,9 +1,14 @@
 package restaurantrush.entity.customer;
 
+import restaurantrush.entity.menu.MenuItem;
+
+import java.util.List;
+import java.util.Random;
+
 public class RegularCustomer extends Customer {
 
-    public RegularCustomer(int customerId) {
-        super(customerId, 100, 8);
+    public RegularCustomer(int customerId, List<MenuItem> menuItemList, Random random) {
+        super(customerId, 100, 8, menuItemList, random);
     }
 
     @Override

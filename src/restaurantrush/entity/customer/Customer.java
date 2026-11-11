@@ -4,19 +4,24 @@ import restaurantrush.entity.menu.MenuItem;
 import restaurantrush.entity.restaurant.Table;
 import restaurantrush.enums.CustomerStatus;
 
+import java.util.List;
+import java.util.Random;
+
 public abstract class Customer {
     protected int customerId;
     protected int satisfaction;
     protected CustomerStatus status;
     protected Table table;
-    protected MenuItem order;
+    protected MenuItem menuItem;
     protected int satisfaction_loss_rate;
 
-    public Customer(int customerId, int satisfaction, int satisfaction_loss_rate) {
+    public Customer(int customerId, int satisfaction, int satisfaction_loss_rate, List<MenuItem> menuItemList, Random random) {
         this.customerId = customerId;
         this.satisfaction = satisfaction;
         this.satisfaction_loss_rate = satisfaction_loss_rate;
         this.status = CustomerStatus.WAITING;
+
+        this.menuItem = menuItemList.get(random.nextInt(menuItemList.size()));
     }
 
     public abstract void decreaseSatisfaction();
@@ -33,10 +38,6 @@ public abstract class Customer {
         this.status = status;
     }
 
-    public void chooseMenuItem(MenuItem item) {
-        order = item;
-    }
-
     public void leaveRestaurant() {
         status = CustomerStatus.LEFT;
     }
@@ -51,5 +52,9 @@ public abstract class Customer {
 
     public Table getTable() {
         return table;
+    }
+
+    public MenuItem getMenuItem() {
+        return menuItem;
     }
 }
