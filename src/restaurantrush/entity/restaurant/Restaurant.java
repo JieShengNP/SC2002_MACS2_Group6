@@ -146,4 +146,24 @@ public class Restaurant {
     public void cookOrder(Order order){
         order.prepare();
     }
+
+    public Order getCustomerOrder(Customer customer){
+        for (Order order: activeOrders){
+            if (order.getCustomer().equals(customer)){
+                return order;
+            }
+        }
+        return null;
+    }
+
+    public void takePayment(Customer customer){
+        Order order = getCustomerOrder(customer);
+        if (order != null){
+            addRevenue(order.getMenuItem().getPrice());
+            customer.setStatus(CustomerStatus.PAID);
+            Table table = customer.getTable();
+            table.removeCustomer();
+            customer.setTable(null);
+        }
+    }
 }

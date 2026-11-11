@@ -30,8 +30,11 @@ public class TurnController {
         handleChefAction();
         handlePayments();
         updateSatisfaction();
+        // TODO: Show the served count, unhappy departures, revenue, average satisfaction of paid customers, and turns used.
+        //  The average uses the satisfaction recorded when each customer pays. If no one has paid yet, show N/A.
         removeLeavingCustomers();
         updateCustomerStatus();
+
     }
 
     private void displayStats() {
@@ -228,6 +231,16 @@ public class TurnController {
     }
 
     private void handlePayments() {
+        Restaurant restaurant = controller.getRestaurant();
+        List<Customer> customersList = restaurant.getCustomers();
+        for (Customer customer: customersList){
+            if (customer.getStatus() == CustomerStatus.READY_TO_PAY){
+                // TODO: Oldest first, maybe create a paying queue?
+                restaurant.takePayment(customer);
+                break;
+
+            }
+        }
     }
 
     private void updateSatisfaction() {
