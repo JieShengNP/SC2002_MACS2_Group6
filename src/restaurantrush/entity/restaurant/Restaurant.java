@@ -6,6 +6,7 @@ import restaurantrush.entity.menu.MenuItem;
 import restaurantrush.entity.menu.Pasta;
 import restaurantrush.entity.menu.Salad;
 import restaurantrush.enums.CustomerStatus;
+import restaurantrush.enums.OrderStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,7 +93,24 @@ public class Restaurant {
     }
 
     public List<Order> getActiveOrders() {
-        return activeOrders;
+        List<Order> activeOrder = new ArrayList<>();
+        for (Order order: activeOrders){
+            if (order.getStatus() == OrderStatus.ORDERED || order.getStatus() == OrderStatus.PREPARING || order.getStatus() == OrderStatus.READY){
+                activeOrder.add(order);
+            }
+        }
+
+        return activeOrder;
+    }
+
+    public List<Order> getCookableOrders(){
+        List<Order> cookableOrder = new ArrayList<>();
+        for (Order order: activeOrders){
+            if (order.getStatus() == OrderStatus.ORDERED || order.getStatus() == OrderStatus.PREPARING){
+                cookableOrder.add(order);
+            }
+        }
+        return cookableOrder;
     }
 
     public void addOrder(Order order) {
@@ -123,5 +141,9 @@ public class Restaurant {
         order.serve();
         Customer customer = order.getCustomer();
         customer.setStatus(CustomerStatus.SERVED);
+    }
+
+    public void cookOrder(Order order){
+        order.prepare();
     }
 }

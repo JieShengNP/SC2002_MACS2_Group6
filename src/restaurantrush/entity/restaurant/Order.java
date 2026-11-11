@@ -22,7 +22,11 @@ public class Order {
 
     public void prepare() {
         currentPreparationUnits += 1;
-        status = OrderStatus.READY;
+        if (currentPreparationUnits == requiredPreparationUnits) {
+            status = OrderStatus.READY;
+        } else {
+            status = OrderStatus.PREPARING;
+        }
     }
 
     public boolean isReady() {

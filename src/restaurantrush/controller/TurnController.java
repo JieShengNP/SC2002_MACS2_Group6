@@ -28,10 +28,10 @@ public class TurnController {
         displayStats();
         handleWaiterAction();
         handleChefAction();
-        handleServing();
         handlePayments();
         updateSatisfaction();
         removeLeavingCustomers();
+        updateCustomerStatus();
     }
 
     private void displayStats() {
@@ -49,7 +49,7 @@ public class TurnController {
         for (Table table : restaurant.getTables()) {
             if (table.isOccupied()) {
                 Customer customer = table.getSeatCustomer();
-                System.out.printf("-Table #%d: Customer #%d: Satisfaction: %d\n", table.getTableNumber(), customer.getCustomerId(), customer.getSatisfaction());
+                System.out.printf("-Table #%d: Customer #%d: Status: %s Satisfaction: %d\n", table.getTableNumber(), customer.getCustomerId(), customer.getStatus(), customer.getSatisfaction());
             }
         }
 
@@ -82,7 +82,7 @@ public class TurnController {
         WaitingQueue waitingQueue = restaurant.getWaitingQueue();
         List<Order> orderList = restaurant.getActiveOrders();
         boolean canSeat = false, canTake = false, canServe = false;
-        System.out.println("\nAvailable Actions: ");
+        System.out.println("\nAvailable Waiter Actions: ");
         if (!restaurant.getAvailableTables().isEmpty()) {
             for (Customer customer : waitingQueue.getQueue()) {
                 System.out.printf("-Waiter: Seat Customer %d\n", customer.getCustomerId());
@@ -180,9 +180,51 @@ public class TurnController {
     }
 
     private void handleChefAction() {
-    }
-
-    private void handleServing() {
+        Restaurant restaurant = controller.getRestaurant();
+        List<Order> orderList = restaurant.getCookableOrders();
+        boolean canCook = false;
+        System.out.println("\nAvailable Chef Actions: ");
+        if (!orderList.isEmpty()) {
+            for (Order order : orderList) {
+                Customer customer = order.getCustomer();
+                System.out.printf("-Chef: Cook Customer ID: %d's %s: %d/%d\n", customer.getCustomerId(), order.getMenuItem().getName(), order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
+                canCook = true;
+            }
+        }
+        System.out.println("-Chef: Wait");
+        List<String> actionsList = new ArrayList<>();
+        if (canCook) {
+            actionsList.add("COOK");
+        }
+        actionsList.add("WAIT");
+        boolean chefActed = false;
+        while (!chefActed) {
+            System.out.printf("Choose Chef Action (%s): ", String.join("/", actionsList));
+            String choice = scanner.nextLine();
+            if (actionsList.stream().anyMatch(choice::equalsIgnoreCase)) {
+                if (choice.equalsIgnoreCase("COOK")) {
+                    while (!chefActed) {
+                        HashMap<String, Order> customerHashMap = new HashMap<>();
+                        for (Order order : orderList) {
+                            Customer customer = order.getCustomer();
+                            System.out.printf("-Chef: Cook Customer ID: %d's %s: %d/%d\n", customer.getCustomerId(), order.getMenuItem().getName(), order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
+                            customerHashMap.put(String.valueOf(customer.getCustomerId()), order);
+                        }
+                        System.out.printf("Choose customer ID (%s): ", String.join("/", customerHashMap.keySet()));
+                        String seatChoice = scanner.nextLine();
+                        if (customerHashMap.containsKey(seatChoice)) {
+                            Order selectedOrder = customerHashMap.get(seatChoice);
+                            restaurant.cookOrder(selectedOrder);
+                            chefActed = true;
+                        }
+                    }
+                } else if (choice.equalsIgnoreCase("WAIT")){
+                    chefActed = true;
+                }
+            } else {
+                System.out.println("Invalid Choice! Pick again: ");
+            }
+        }
     }
 
     private void handlePayments() {
@@ -209,6 +251,17 @@ public class TurnController {
                 }
                 customer.setStatus(CustomerStatus.LEFT);
                 // TODO: Cancel Orders, Remove Table
+            }
+        }
+    }
+
+    private void updateCustomerStatus() {
+        Restaurant restaurant = controller.getRestaurant();
+        for (Customer customer: restaurant.getCustomers()){
+            if (customer.getStatus() == CustomerStatus.SERVED){
+                customer.setStatus(CustomerStatus.EATING);
+            } else if (customer.getStatus() == CustomerStatus.EATING){
+                customer.setStatus(CustomerStatus.READY_TO_PAY);
             }
         }
     }

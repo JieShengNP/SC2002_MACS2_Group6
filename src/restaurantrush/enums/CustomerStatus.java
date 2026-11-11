@@ -5,6 +5,7 @@ public enum CustomerStatus {
     SEATED,
     ORDERED,
     SERVED,
+    EATING,
     READY_TO_PAY,
     PAID,
     LEFT
