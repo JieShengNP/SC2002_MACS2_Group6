@@ -5,13 +5,14 @@ import restaurantrush.entity.menu.Burger;
 import restaurantrush.entity.menu.MenuItem;
 import restaurantrush.entity.menu.Pasta;
 import restaurantrush.entity.menu.Salad;
+import restaurantrush.entity.staff.Cashier;
+import restaurantrush.entity.staff.Chef;
+import restaurantrush.entity.staff.Staff;
+import restaurantrush.entity.staff.Waiter;
 import restaurantrush.enums.CustomerStatus;
 import restaurantrush.enums.OrderStatus;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class Restaurant {
 
@@ -23,6 +24,7 @@ public class Restaurant {
     private final List<MenuItem> menuItemList;
     private int nextOrderId = 1;
     private final Queue<Customer> paymentQueue;
+    private final List<Staff> staffList;
 
     public Restaurant() {
         tables = new ArrayList<>();
@@ -37,6 +39,7 @@ public class Restaurant {
         );
 
         paymentQueue = new LinkedList<>();
+        staffList = List.of(new Waiter(), new Chef(), new Cashier());
     }
 
     public List<Customer> getCustomers() {
@@ -116,10 +119,6 @@ public class Restaurant {
             }
         }
         return cookableOrder;
-    }
-
-    public void addOrder(Order order) {
-        activeOrders.add(order);
     }
 
     public List<MenuItem> getMenuItemList() {
@@ -217,5 +216,11 @@ public class Restaurant {
             }
         }
         return count;
+    }
+
+    public void staffWork(Scanner scanner){
+        for (Staff staff: staffList){
+            staff.performTask(this, scanner);
+        }
     }
 }

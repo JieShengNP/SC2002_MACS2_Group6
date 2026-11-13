@@ -9,8 +9,6 @@ import restaurantrush.entity.restaurant.WaitingQueue;
 import restaurantrush.enums.CustomerStatus;
 import restaurantrush.enums.OrderStatus;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -26,9 +24,7 @@ public class TurnController {
     public void nextTurn() {
         handleArrivals();
         displayStartTurnStats();
-        handleWaiterAction();
-        handleChefAction();
-        handlePayments();
+        handleStaffActions();
         updateSatisfaction();
         displayEndTurnStats();
         updateCustomerStatus();
@@ -38,7 +34,7 @@ public class TurnController {
     private void displayStartTurnStats() {
         Restaurant restaurant = controller.getRestaurant();
         WaitingQueue waitingQueue = restaurant.getWaitingQueue();
-        System.out.printf("\n\nStart of Turn: %d/%d\n", controller.getTurnNumber(), GameController.MAX_TURNS);
+        System.out.printf("\n====================\nStart of Turn: %d/%d\n", controller.getTurnNumber(), GameController.MAX_TURNS);
         System.out.printf("Current Revenue: $%s\n", restaurant.getRevenue() % 100 == 0 ? (restaurant.getRevenue() / 100) : String.format("%.2f", (restaurant.getRevenue() * 0.01f)));
         System.out.printf("Average Satisfaction of Paid Customers: %s\n", Double.isNaN(restaurant.getPaidAverageSatisfaction()) ? "N/A" : String.format("%.2f", restaurant.getPaidAverageSatisfaction()));
         System.out.printf("Waiting Queue: %s\n", (waitingQueue.isEmpty() ? "None" : ""));
@@ -78,159 +74,9 @@ public class TurnController {
         }
     }
 
-    private void handleWaiterAction() {
+    private void handleStaffActions(){
         Restaurant restaurant = controller.getRestaurant();
-        WaitingQueue waitingQueue = restaurant.getWaitingQueue();
-        List<Order> orderList = restaurant.getActiveOrders();
-        boolean canSeat = false, canTake = false, canServe = false;
-        System.out.println("\nAvailable Waiter Actions: ");
-        if (!restaurant.getAvailableTables().isEmpty()) {
-            for (Customer customer : waitingQueue.getQueue()) {
-                System.out.printf("-Waiter: Seat Customer %d\n", customer.getCustomerId());
-                canSeat = true;
-            }
-        }
-        for (Customer customer : restaurant.getCustomers()) {
-            if (customer.getStatus() == CustomerStatus.SEATED) {
-                System.out.printf("-Waiter: Take Order from Customer %d\n", customer.getCustomerId());
-                canTake = true;
-            }
-        }
-        for (Order order : orderList) {
-            if (order.getStatus() == OrderStatus.READY) {
-                System.out.printf("-Waiter: Serve Order to Customer %d\n", order.getCustomer().getCustomerId());
-                canServe = true;
-            }
-        }
-        System.out.println("-Waiter: Wait");
-        List<String> actionsList = new ArrayList<>();
-        if (canSeat) {
-            actionsList.add("SEAT");
-        }
-        if (canTake) {
-            actionsList.add("TAKE");
-        }
-        if (canServe) {
-            actionsList.add("SERVE");
-        }
-        actionsList.add("WAIT");
-        boolean waiterActed = false;
-        while (!waiterActed) {
-            System.out.printf("Choose Waiter Action (%s): ", String.join("/", actionsList));
-            String choice = scanner.nextLine();
-            if (actionsList.stream().anyMatch(choice::equalsIgnoreCase)) {
-                if (choice.equalsIgnoreCase("SEAT")) {
-                    while (!waiterActed) {
-                        HashMap<String, Customer> customerHashMap = new HashMap<>();
-                        for (Customer customer : waitingQueue.getQueue()) {
-                            System.out.printf("Customer ID: %d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
-                            customerHashMap.put(String.valueOf(customer.getCustomerId()), customer);
-                        }
-                        System.out.printf("Choose customer ID (%s): ", String.join("/", customerHashMap.keySet()));
-                        String seatChoice = scanner.nextLine();
-                        if (customerHashMap.containsKey(seatChoice)) {
-                            Customer selectedCustomer = customerHashMap.get(seatChoice);
-                            restaurant.seatCustomer(selectedCustomer);
-                            waiterActed = true;
-                        }
-                    }
-                } else if (choice.equalsIgnoreCase("TAKE")){
-                    while (!waiterActed) {
-                        HashMap<String, Customer> customerHashMap = new HashMap<>();
-                        for (Customer customer : restaurant.getCustomers()) {
-                            if (customer.getStatus() == CustomerStatus.SEATED) {
-                                System.out.printf("Customer ID: %d | Order: %s\n", customer.getCustomerId(), customer.getMenuItem().getName());
-                                customerHashMap.put(String.valueOf(customer.getCustomerId()), customer);
-                            }
-                        }
-                        System.out.printf("Choose customer ID (%s): ", String.join("/", customerHashMap.keySet()));
-                        String seatChoice = scanner.nextLine();
-                        if (customerHashMap.containsKey(seatChoice)) {
-                            Customer selectedCustomer = customerHashMap.get(seatChoice);
-                            restaurant.takeOrder(selectedCustomer);
-                            waiterActed = true;
-                        }
-                    }
-                }  else if (choice.equalsIgnoreCase("SERVE")) {
-                    while (!waiterActed) {
-                        HashMap<String, Order> customerHashMap = new HashMap<>();
-                        for (Order order : restaurant.getActiveOrders()) {
-                            if (order.getStatus() == OrderStatus.READY) {
-                                Customer customer = order.getCustomer();
-                                System.out.printf("Customer ID: %d | Order: %s\n", customer.getCustomerId(), customer.getMenuItem().getName());
-                                customerHashMap.put(String.valueOf(customer.getCustomerId()), order);
-                            }
-                        }
-                        System.out.printf("Choose customer ID (%s): ", String.join("/", customerHashMap.keySet()));
-                        String seatChoice = scanner.nextLine();
-                        if (customerHashMap.containsKey(seatChoice)) {
-                            Order selectedOrder = customerHashMap.get(seatChoice);
-                            restaurant.serveOrder(selectedOrder);
-                            waiterActed = true;
-                        }
-                    }
-                } else if (choice.equalsIgnoreCase("WAIT")){
-                    waiterActed = true;
-                }
-            } else {
-                System.out.println("Invalid Choice! Pick again: ");
-            }
-        }
-
-
-    }
-
-    private void handleChefAction() {
-        Restaurant restaurant = controller.getRestaurant();
-        List<Order> orderList = restaurant.getCookableOrders();
-        boolean canCook = false;
-        System.out.println("\nAvailable Chef Actions: ");
-        if (!orderList.isEmpty()) {
-            for (Order order : orderList) {
-                Customer customer = order.getCustomer();
-                System.out.printf("-Chef: Cook Customer ID: %d's %s: %d/%d\n", customer.getCustomerId(), order.getMenuItem().getName(), order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
-                canCook = true;
-            }
-        }
-        System.out.println("-Chef: Wait");
-        List<String> actionsList = new ArrayList<>();
-        if (canCook) {
-            actionsList.add("COOK");
-        }
-        actionsList.add("WAIT");
-        boolean chefActed = false;
-        while (!chefActed) {
-            System.out.printf("Choose Chef Action (%s): ", String.join("/", actionsList));
-            String choice = scanner.nextLine();
-            if (actionsList.stream().anyMatch(choice::equalsIgnoreCase)) {
-                if (choice.equalsIgnoreCase("COOK")) {
-                    while (!chefActed) {
-                        HashMap<String, Order> customerHashMap = new HashMap<>();
-                        for (Order order : orderList) {
-                            Customer customer = order.getCustomer();
-                            System.out.printf("-Chef: Cook Customer ID: %d's %s: %d/%d\n", customer.getCustomerId(), order.getMenuItem().getName(), order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
-                            customerHashMap.put(String.valueOf(customer.getCustomerId()), order);
-                        }
-                        System.out.printf("Choose customer ID (%s): ", String.join("/", customerHashMap.keySet()));
-                        String seatChoice = scanner.nextLine();
-                        if (customerHashMap.containsKey(seatChoice)) {
-                            Order selectedOrder = customerHashMap.get(seatChoice);
-                            restaurant.cookOrder(selectedOrder);
-                            chefActed = true;
-                        }
-                    }
-                } else if (choice.equalsIgnoreCase("WAIT")){
-                    chefActed = true;
-                }
-            } else {
-                System.out.println("Invalid Choice! Pick again: ");
-            }
-        }
-    }
-
-    private void handlePayments() {
-        Restaurant restaurant = controller.getRestaurant();
-        restaurant.takeNextPayment();
+        restaurant.staffWork(scanner);
     }
 
     private void updateSatisfaction() {
@@ -251,11 +97,11 @@ public class TurnController {
         List<Customer> leavingCustomers = restaurant.removeLeavingCustomers();
         System.out.printf("Unhappy departures: %s\n", leavingCustomers.isEmpty()? "N/A" : "");
         for (Customer customer: leavingCustomers){
-            System.out.printf("-Customer ID %d has left.\n", customer.getCustomerId());
+            System.out.printf("-Customer #%d has left.\n", customer.getCustomerId());
         }
         System.out.printf("Current Revenue: $%s\n", restaurant.getRevenue() % 100 == 0 ? (restaurant.getRevenue() / 100) : String.format("%.2f", (restaurant.getRevenue() * 0.01f)));
         System.out.printf("Average Satisfaction of Paid Customers: %s\n", Double.isNaN(restaurant.getPaidAverageSatisfaction()) ? "N/A" : String.format("%.2f", restaurant.getPaidAverageSatisfaction()));
-        System.out.printf("Turns used: %d\n", controller.getTurnNumber());
+        System.out.printf("Turns used: %d\n====================\n", controller.getTurnNumber());
     }
 
 
