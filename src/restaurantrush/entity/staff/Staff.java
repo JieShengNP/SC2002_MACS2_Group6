@@ -1,10 +1,9 @@
 package restaurantrush.entity.staff;
 
 import restaurantrush.entity.restaurant.Restaurant;
-
-import java.util.Scanner;
+import restaurantrush.view.RestaurantCLI;
 
 public abstract class Staff {
-    public abstract void performTask(Restaurant restaurant, Scanner scanner);
+    public abstract void performTask(Restaurant restaurant, RestaurantCLI cli);
 
 }

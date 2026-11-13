@@ -24,6 +24,23 @@ public abstract class Customer {
         this.menuItem = menuItemList.get(random.nextInt(menuItemList.size()));
     }
 
+    public void updateSatisfaction(){
+        if (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED){
+            decreaseSatisfaction();
+        }
+    }
+
+    public boolean updateServePayState(){
+        if (status == CustomerStatus.SERVED) {
+            status = CustomerStatus.EATING;
+            return false;
+        } else if (status == CustomerStatus.EATING) {
+            status = CustomerStatus.READY_TO_PAY;
+            return true;
+        }
+        return false;
+    }
+
     public abstract void decreaseSatisfaction();
 
     public int getSatisfaction() {
@@ -57,4 +74,6 @@ public abstract class Customer {
     public MenuItem getMenuItem() {
         return menuItem;
     }
+
+
 }

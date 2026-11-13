@@ -1,6 +1,7 @@
 package restaurantrush.controller;
 
 import restaurantrush.entity.restaurant.Restaurant;
+import restaurantrush.view.RestaurantCLI;
 
 import java.util.Random;
 
@@ -11,38 +12,24 @@ public class GameController {
     protected Random random;
 
     private final Restaurant restaurant;
-    private int turnNumber = 0;
+    private final RestaurantCLI cli;
 
     public GameController() {
         restaurant = new Restaurant();
         random = new Random(GAME_SEED);
-    }
-
-    public Restaurant getRestaurant() {
-        return restaurant;
-    }
-
-    public int getTurnNumber() {
-        return turnNumber;
+        cli = new RestaurantCLI();
     }
 
     public void start() {
-        TurnController turnController = new TurnController(this);
+        TurnController turnController = new TurnController(restaurant, cli, random);
         for (int i = 1; i <= MAX_TURNS; i++) {
-            turnNumber = i;
-            turnController.nextTurn();
+            turnController.nextTurn(i);
         }
         end();
     }
 
     private void end(){
-        System.out.println("\nEND OF RESTAURANT RUSH\n");
-        if (restaurant.getPaidCustomer().size() >= 4 && restaurant.getRevenue() >= 4500 && restaurant.getPaidAverageSatisfaction() >= 60){
-            System.out.println("Victory! You met all 3 targets!");
-        } else {
-            System.out.println("Defeat! You did not meet all 3 targets!");
-        }
-        System.out.printf("Stats: \n-Paid Customers: %d\n-Revenue: %s\n-Average Satisfaction: %.2f", restaurant.getPaidCustomer().size(), restaurant.getRevenue() % 100 == 0 ? (restaurant.getRevenue() / 100) : String.format("%.2f", (restaurant.getRevenue() * 0.01f)), restaurant.getPaidAverageSatisfaction());
+        cli.displayEndGameResult(restaurant);
     }
 
 }

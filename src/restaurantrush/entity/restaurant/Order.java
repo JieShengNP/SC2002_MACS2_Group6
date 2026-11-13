@@ -29,10 +29,6 @@ public class Order {
         }
     }
 
-    public boolean isReady() {
-        return currentPreparationUnits == requiredPreparationUnits;
-    }
-
     public void serve() {
         status = OrderStatus.SERVED;
     }

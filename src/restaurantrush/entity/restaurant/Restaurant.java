@@ -11,6 +11,7 @@ import restaurantrush.entity.staff.Staff;
 import restaurantrush.entity.staff.Waiter;
 import restaurantrush.enums.CustomerStatus;
 import restaurantrush.enums.OrderStatus;
+import restaurantrush.view.RestaurantCLI;
 
 import java.util.*;
 
@@ -151,7 +152,7 @@ public class Restaurant {
         order.prepare();
     }
 
-    public Order getCustomerOrder(Customer customer){
+    private Order getCustomerOrder(Customer customer){
         for (Order order: activeOrders){
             if (order.getCustomer().equals(customer)){
                 return order;
@@ -218,9 +219,27 @@ public class Restaurant {
         return count;
     }
 
-    public void staffWork(Scanner scanner){
-        for (Staff staff: staffList){
-            staff.performTask(this, scanner);
+    public List<Staff> getStaffList(){
+        return staffList;
+    }
+
+    public List<Customer> getSeatedCustomers(){
+        List<Customer> seatedList = new ArrayList<>();
+        for (Customer customer : customers){
+            if (customer.getStatus() == CustomerStatus.SEATED){
+                seatedList.add(customer);
+            }
         }
+        return seatedList;
+    }
+
+    public List<Order> getReadyOrders(){
+        List<Order> readyOrders = new ArrayList<>();
+        for (Order order : activeOrders){
+            if (order.getStatus() == OrderStatus.READY){
+                readyOrders.add(order);
+            }
+        }
+        return readyOrders;
     }
 }

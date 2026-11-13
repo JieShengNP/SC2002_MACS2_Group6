@@ -1,13 +1,12 @@
 package restaurantrush.entity.staff;
 
 import restaurantrush.entity.restaurant.Restaurant;
-
-import java.util.Scanner;
+import restaurantrush.view.RestaurantCLI;
 
 public class Cashier extends Staff {
 
     @Override
-    public void performTask(Restaurant restaurant, Scanner scanner) {
+    public void performTask(Restaurant restaurant, RestaurantCLI cli) {
         restaurant.takeNextPayment();
     }
 }
