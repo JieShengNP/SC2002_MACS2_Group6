@@ -9,7 +9,9 @@ import restaurantrush.enums.CustomerStatus;
 import restaurantrush.enums.OrderStatus;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class Restaurant {
 
@@ -20,6 +22,7 @@ public class Restaurant {
     private int revenue = 0;
     private final List<MenuItem> menuItemList;
     private int nextOrderId = 1;
+    private final Queue<Customer> paymentQueue;
 
     public Restaurant() {
         tables = new ArrayList<>();
@@ -32,6 +35,8 @@ public class Restaurant {
         menuItemList = List.of(
                 new Burger(), new Pasta(), new Salad()
         );
+
+        paymentQueue = new LinkedList<>();
     }
 
     public List<Customer> getCustomers() {
@@ -156,14 +161,24 @@ public class Restaurant {
         return null;
     }
 
-    public void takePayment(Customer customer){
-        Order order = getCustomerOrder(customer);
-        if (order != null){
-            addRevenue(order.getMenuItem().getPrice());
-            customer.setStatus(CustomerStatus.PAID);
-            Table table = customer.getTable();
-            table.removeCustomer();
-            customer.setTable(null);
+    public void takeNextPayment(){
+        Customer customer = paymentQueue.peek();
+        if (customer != null){
+            Order order = getCustomerOrder(customer);
+            if (order != null) {
+                addRevenue(order.getMenuItem().getPrice());
+                customer.setStatus(CustomerStatus.PAID);
+                Table table = customer.getTable();
+                table.removeCustomer();
+                customer.setTable(null);
+                paymentQueue.remove();
+            }
+        }
+    }
+
+    public void addToPaymentQueue(Customer customer){
+        if (customer.getStatus() == CustomerStatus.READY_TO_PAY){
+            paymentQueue.add(customer);
         }
     }
 }

@@ -52,14 +52,14 @@ public class TurnController {
         for (Table table : restaurant.getTables()) {
             if (table.isOccupied()) {
                 Customer customer = table.getSeatCustomer();
-                System.out.printf("-Table #%d: Customer #%d: Status: %s Satisfaction: %d\n", table.getTableNumber(), customer.getCustomerId(), customer.getStatus(), customer.getSatisfaction());
+                System.out.printf("-Table #%d: | Customer #%d: Status: %s | Satisfaction: %d\n", table.getTableNumber(), customer.getCustomerId(), customer.getStatus(), customer.getSatisfaction());
             }
         }
 
         List<Order> orderList = restaurant.getActiveOrders();
         System.out.printf("Active Orders: %s\n", orderList.isEmpty() ? "None" : orderList.size());
         for (Order order : orderList) {
-            System.out.printf("-Order: %s Customer: %d Status: %s ", order.getMenuItem().getName(), order.getCustomer().getCustomerId(), order.getStatus().name());
+            System.out.printf("-Order: %s | Customer: %d | Status: %s ", order.getMenuItem().getName(), order.getCustomer().getCustomerId(), order.getStatus().name());
             if (order.getStatus() == OrderStatus.PREPARING) {
                 System.out.printf("Preparing %d/%d\n", order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
             } else {
@@ -125,7 +125,7 @@ public class TurnController {
                     while (!waiterActed) {
                         HashMap<String, Customer> customerHashMap = new HashMap<>();
                         for (Customer customer : waitingQueue.getQueue()) {
-                            System.out.printf("Customer ID: %d Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
+                            System.out.printf("Customer ID: %d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
                             customerHashMap.put(String.valueOf(customer.getCustomerId()), customer);
                         }
                         System.out.printf("Choose customer ID (%s): ", String.join("/", customerHashMap.keySet()));
@@ -141,7 +141,7 @@ public class TurnController {
                         HashMap<String, Customer> customerHashMap = new HashMap<>();
                         for (Customer customer : restaurant.getCustomers()) {
                             if (customer.getStatus() == CustomerStatus.SEATED) {
-                                System.out.printf("Customer ID: %d Order: %s\n", customer.getCustomerId(), customer.getMenuItem().getName());
+                                System.out.printf("Customer ID: %d | Order: %s\n", customer.getCustomerId(), customer.getMenuItem().getName());
                                 customerHashMap.put(String.valueOf(customer.getCustomerId()), customer);
                             }
                         }
@@ -159,7 +159,7 @@ public class TurnController {
                         for (Order order : restaurant.getActiveOrders()) {
                             if (order.getStatus() == OrderStatus.READY) {
                                 Customer customer = order.getCustomer();
-                                System.out.printf("Customer ID: %d Order: %s\n", customer.getCustomerId(), customer.getMenuItem().getName());
+                                System.out.printf("Customer ID: %d | Order: %s\n", customer.getCustomerId(), customer.getMenuItem().getName());
                                 customerHashMap.put(String.valueOf(customer.getCustomerId()), order);
                             }
                         }
@@ -232,15 +232,7 @@ public class TurnController {
 
     private void handlePayments() {
         Restaurant restaurant = controller.getRestaurant();
-        List<Customer> customersList = restaurant.getCustomers();
-        for (Customer customer: customersList){
-            if (customer.getStatus() == CustomerStatus.READY_TO_PAY){
-                // TODO: Oldest first, maybe create a paying queue?
-                restaurant.takePayment(customer);
-                break;
-
-            }
-        }
+        restaurant.takeNextPayment();
     }
 
     private void updateSatisfaction() {
@@ -275,6 +267,7 @@ public class TurnController {
                 customer.setStatus(CustomerStatus.EATING);
             } else if (customer.getStatus() == CustomerStatus.EATING){
                 customer.setStatus(CustomerStatus.READY_TO_PAY);
+                restaurant.addToPaymentQueue(customer);
             }
         }
     }
