@@ -246,8 +246,8 @@ public class TurnController {
 
     private void displayEndTurnStats() {
         Restaurant restaurant = controller.getRestaurant();
-        // TODO: SHOW SERVED COUNT?
         System.out.printf("\nEnd of Turn: %d/%d\n", controller.getTurnNumber(), GameController.MAX_TURNS);
+        System.out.printf("Total Served Count: %d\n", restaurant.getServedCount());
         List<Customer> leavingCustomers = restaurant.removeLeavingCustomers();
         System.out.printf("Unhappy departures: %s\n", leavingCustomers.isEmpty()? "N/A" : "");
         for (Customer customer: leavingCustomers){
@@ -255,7 +255,7 @@ public class TurnController {
         }
         System.out.printf("Current Revenue: $%s\n", restaurant.getRevenue() % 100 == 0 ? (restaurant.getRevenue() / 100) : String.format("%.2f", (restaurant.getRevenue() * 0.01f)));
         System.out.printf("Average Satisfaction of Paid Customers: %s\n", Double.isNaN(restaurant.getPaidAverageSatisfaction()) ? "N/A" : String.format("%.2f", restaurant.getPaidAverageSatisfaction()));
-        // TODO: Show turns used
+        System.out.printf("Turns used: %d\n", controller.getTurnNumber());
     }
 
 
