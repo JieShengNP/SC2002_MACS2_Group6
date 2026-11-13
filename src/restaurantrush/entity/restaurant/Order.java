@@ -5,11 +5,11 @@ import restaurantrush.entity.menu.MenuItem;
 import restaurantrush.enums.OrderStatus;
 
 public class Order {
-    private int orderId;
-    private Customer customer;
-    private MenuItem menuItem;
+    private final int orderId;
+    private final Customer customer;
+    private final MenuItem menuItem;
     private OrderStatus status;
-    private int requiredPreparationUnits;
+    private final int requiredPreparationUnits;
     private int currentPreparationUnits = 0;
 
     public Order(int orderId, Customer customer, MenuItem menuItem) {
@@ -42,7 +42,6 @@ public class Order {
     }
 
     public void cancel() {
-        // TODO: Maybe delete the order
         status = OrderStatus.CANCELLED;
     }
 

@@ -168,6 +168,7 @@ public class Restaurant {
             if (order != null) {
                 addRevenue(order.getMenuItem().getPrice());
                 customer.setStatus(CustomerStatus.PAID);
+                order.markPaid();
                 Table table = customer.getTable();
                 table.removeCustomer();
                 customer.setTable(null);
@@ -179,6 +180,28 @@ public class Restaurant {
     public void addToPaymentQueue(Customer customer){
         if (customer.getStatus() == CustomerStatus.READY_TO_PAY){
             paymentQueue.add(customer);
+        }
+    }
+
+    public void removeLeavingCustomers(){
+        for (Customer customer : customers) {
+            CustomerStatus status = customer.getStatus();
+            if ((customer.getSatisfaction() == 0) && (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED)) {
+                if (status == CustomerStatus.WAITING) {
+                    waitingQueue.removeCustomer(customer);
+                } else if (status == CustomerStatus.SEATED){
+                    Table table = customer.getTable();
+                    table.removeCustomer();
+                    customer.setTable(null);
+                } else {
+                    Table table = customer.getTable();
+                    table.removeCustomer();
+                    customer.setTable(null);
+                    Order order = getCustomerOrder(customer);
+                    order.cancel();
+                }
+                customer.setStatus(CustomerStatus.LEFT);
+            }
         }
     }
 }
