@@ -183,7 +183,8 @@ public class Restaurant {
         }
     }
 
-    public void removeLeavingCustomers(){
+    public List<Customer> removeLeavingCustomers(){
+        List<Customer> leftList = new ArrayList<>();
         for (Customer customer : customers) {
             CustomerStatus status = customer.getStatus();
             if ((customer.getSatisfaction() == 0) && (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED)) {
@@ -200,8 +201,10 @@ public class Restaurant {
                     Order order = getCustomerOrder(customer);
                     order.cancel();
                 }
+                leftList.add(customer);
                 customer.setStatus(CustomerStatus.LEFT);
             }
         }
+        return leftList;
     }
 }

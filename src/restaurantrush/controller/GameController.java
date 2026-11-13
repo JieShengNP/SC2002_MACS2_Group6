@@ -32,6 +32,17 @@ public class GameController {
             turnNumber = i;
             turnController.nextTurn();
         }
+        end();
+    }
+
+    private void end(){
+        System.out.println("\nEND OF RESTAURANT RUSH\n");
+        if (restaurant.getPaidCustomer().size() >= 4 && restaurant.getRevenue() >= 4500 && restaurant.getPaidAverageSatisfaction() >= 60){
+            System.out.println("Victory! You met all 3 targets!");
+        } else {
+            System.out.println("Defeat! You did not meet all 3 targets!");
+        }
+        System.out.printf("Stats: \n-Paid Customers: %d\n-Revenue: %s\n-Average Satisfaction: %.2f", restaurant.getPaidCustomer().size(), restaurant.getRevenue() % 100 == 0 ? (restaurant.getRevenue() / 100) : String.format("%.2f", (restaurant.getRevenue() * 0.01f)), restaurant.getPaidAverageSatisfaction());
     }
 
 }

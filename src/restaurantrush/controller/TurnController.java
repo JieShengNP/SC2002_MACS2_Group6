@@ -25,22 +25,20 @@ public class TurnController {
 
     public void nextTurn() {
         handleArrivals();
-        displayStats();
+        displayStartTurnStats();
         handleWaiterAction();
         handleChefAction();
         handlePayments();
         updateSatisfaction();
-        // TODO: Show the served count, unhappy departures, revenue, average satisfaction of paid customers, and turns used.
-        //  The average uses the satisfaction recorded when each customer pays. If no one has paid yet, show N/A.
-        removeLeavingCustomers();
+        displayEndTurnStats();
         updateCustomerStatus();
 
     }
 
-    private void displayStats() {
+    private void displayStartTurnStats() {
         Restaurant restaurant = controller.getRestaurant();
         WaitingQueue waitingQueue = restaurant.getWaitingQueue();
-        System.out.printf("\n\nCurrent Turn: %d/%d\n", controller.getTurnNumber(), GameController.MAX_TURNS);
+        System.out.printf("\n\nStart of Turn: %d/%d\n", controller.getTurnNumber(), GameController.MAX_TURNS);
         System.out.printf("Current Revenue: $%s\n", restaurant.getRevenue() % 100 == 0 ? (restaurant.getRevenue() / 100) : String.format("%.2f", (restaurant.getRevenue() * 0.01f)));
         System.out.printf("Average Satisfaction of Paid Customers: %s\n", Double.isNaN(restaurant.getPaidAverageSatisfaction()) ? "N/A" : String.format("%.2f", restaurant.getPaidAverageSatisfaction()));
         System.out.printf("Waiting Queue: %s\n", (waitingQueue.isEmpty() ? "None" : ""));
@@ -241,24 +239,26 @@ public class TurnController {
             CustomerStatus status = customer.getStatus();
             if (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED) {
                 customer.decreaseSatisfaction();
+
             }
         }
     }
 
-    private void removeLeavingCustomers() {
+    private void displayEndTurnStats() {
         Restaurant restaurant = controller.getRestaurant();
-        List<Customer> customerList = restaurant.getCustomers();
-        for (Customer customer : customerList) {
-            CustomerStatus status = customer.getStatus();
-            if ((customer.getSatisfaction() == 0) && (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED)) {
-                if (status == CustomerStatus.WAITING) {
-                    restaurant.getWaitingQueue().removeCustomer(customer);
-                }
-                customer.setStatus(CustomerStatus.LEFT);
-                // TODO: Cancel Orders, Remove Table
-            }
+        // TODO: SHOW SERVED COUNT?
+        System.out.printf("\nEnd of Turn: %d/%d\n", controller.getTurnNumber(), GameController.MAX_TURNS);
+        List<Customer> leavingCustomers = restaurant.removeLeavingCustomers();
+        System.out.printf("Unhappy departures: %s\n", leavingCustomers.isEmpty()? "N/A" : "");
+        for (Customer customer: leavingCustomers){
+            System.out.printf("-Customer ID %d has left.\n", customer.getCustomerId());
         }
+        System.out.printf("Current Revenue: $%s\n", restaurant.getRevenue() % 100 == 0 ? (restaurant.getRevenue() / 100) : String.format("%.2f", (restaurant.getRevenue() * 0.01f)));
+        System.out.printf("Average Satisfaction of Paid Customers: %s\n", Double.isNaN(restaurant.getPaidAverageSatisfaction()) ? "N/A" : String.format("%.2f", restaurant.getPaidAverageSatisfaction()));
+        // TODO: Show turns used
     }
+
+
 
     private void updateCustomerStatus() {
         Restaurant restaurant = controller.getRestaurant();
