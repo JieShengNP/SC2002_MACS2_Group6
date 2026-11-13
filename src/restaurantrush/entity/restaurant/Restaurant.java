@@ -11,7 +11,6 @@ import restaurantrush.entity.staff.Staff;
 import restaurantrush.entity.staff.Waiter;
 import restaurantrush.enums.CustomerStatus;
 import restaurantrush.enums.OrderStatus;
-import restaurantrush.view.RestaurantCLI;
 
 import java.util.*;
 
@@ -199,7 +198,9 @@ public class Restaurant {
                     table.removeCustomer();
                     customer.setTable(null);
                     Order order = getCustomerOrder(customer);
-                    order.cancel();
+                    if (order != null) {
+                        order.cancel();
+                    }
                 }
                 leftList.add(customer);
                 customer.setStatus(CustomerStatus.LEFT);

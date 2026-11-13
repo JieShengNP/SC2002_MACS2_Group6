@@ -3,13 +3,9 @@ package restaurantrush.entity.staff;
 import restaurantrush.entity.customer.Customer;
 import restaurantrush.entity.restaurant.Order;
 import restaurantrush.entity.restaurant.Restaurant;
-import restaurantrush.entity.restaurant.WaitingQueue;
-import restaurantrush.enums.CustomerStatus;
-import restaurantrush.enums.OrderStatus;
 import restaurantrush.view.RestaurantCLI;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class Waiter extends Staff {

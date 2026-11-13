@@ -5,7 +5,6 @@ import restaurantrush.entity.customer.RegularCustomer;
 import restaurantrush.entity.restaurant.Restaurant;
 import restaurantrush.entity.restaurant.WaitingQueue;
 import restaurantrush.entity.staff.Staff;
-import restaurantrush.enums.CustomerStatus;
 import restaurantrush.view.RestaurantCLI;
 
 import java.util.List;

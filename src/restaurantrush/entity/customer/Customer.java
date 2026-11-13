@@ -55,10 +55,6 @@ public abstract class Customer {
         this.status = status;
     }
 
-    public void leaveRestaurant() {
-        status = CustomerStatus.LEFT;
-    }
-
     public int getCustomerId() {
         return customerId;
     }

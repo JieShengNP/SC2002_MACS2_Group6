@@ -41,10 +41,6 @@ public class Order {
         status = OrderStatus.CANCELLED;
     }
 
-    public int getOrderId() {
-        return orderId;
-    }
-
     public Customer getCustomer() {
         return customer;
     }
