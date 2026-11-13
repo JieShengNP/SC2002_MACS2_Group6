@@ -5,15 +5,13 @@ import restaurantrush.entity.menu.MenuItem;
 import restaurantrush.enums.OrderStatus;
 
 public class Order {
-    private final int orderId;
     private final Customer customer;
     private final MenuItem menuItem;
     private OrderStatus status;
     private final int requiredPreparationUnits;
     private int currentPreparationUnits = 0;
 
-    public Order(int orderId, Customer customer, MenuItem menuItem) {
-        this.orderId = orderId;
+    public Order(Customer customer, MenuItem menuItem) {
         this.customer = customer;
         this.menuItem = menuItem;
         status = OrderStatus.ORDERED;

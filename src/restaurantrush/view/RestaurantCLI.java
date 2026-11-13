@@ -22,10 +22,6 @@ public class RestaurantCLI {
         return scanner.nextLine();
     }
 
-    public void displayMessage(String message) {
-        System.out.print(message);
-    }
-
     public void displayStartTurnStats(Restaurant restaurant, int turnNumber) {
         WaitingQueue waitingQueue = restaurant.getWaitingQueue();
         System.out.printf("\n====================\nStart of Turn: %d/%d\n", turnNumber, GameController.MAX_TURNS);
@@ -36,12 +32,12 @@ public class RestaurantCLI {
             System.out.printf("-Customer #%d: Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
         }
 
-        System.out.printf("Occupied Tables: %s\n", restaurant.getOccupiedTableCount() == 0 ? "None" : restaurant.getOccupiedTableCount());
-        for (Table table : restaurant.getTables()) {
-            if (table.isOccupied()) {
-                Customer customer = table.getSeatCustomer();
-                System.out.printf("-Table #%d: | Customer #%d: Status: %s | Satisfaction: %d\n", table.getTableNumber(), customer.getCustomerId(), customer.getStatus(), customer.getSatisfaction());
-            }
+        List<Table> occupiedTables = restaurant.getOccupiedTables();
+        System.out.printf("Occupied Tables: %s\n", occupiedTables.isEmpty() ? "None" : occupiedTables.size());
+        for (Table table : occupiedTables) {
+            Customer customer = table.getSeatCustomer();
+            System.out.printf("-Table #%d: | Customer #%d: Status: %s | Satisfaction: %d\n", table.getTableNumber(), customer.getCustomerId(), customer.getStatus(), customer.getSatisfaction());
+
         }
 
         List<Order> orderList = restaurant.getActiveOrders();

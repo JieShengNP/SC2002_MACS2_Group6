@@ -22,7 +22,6 @@ public class Restaurant {
     private final List<Customer> customers;
     private int revenue = 0;
     private final List<MenuItem> menuItemList;
-    private int nextOrderId = 1;
     private final Queue<Customer> paymentQueue;
     private final List<Staff> staffList;
 
@@ -73,16 +72,14 @@ public class Restaurant {
         return freeList;
     }
 
-    public int getOccupiedTableCount() {
-        int occupied = 0;
+    public List<Table> getOccupiedTables() {
+        List<Table> occupiedTables = new ArrayList<>();
         for (Table t : tables) {
-            if (t.isOccupied()) occupied++;
+            if (t.isOccupied()) {
+                occupiedTables.add(t);
+            }
         }
-        return occupied;
-    }
-
-    public List<Table> getTables() {
-        return tables;
+        return occupiedTables;
     }
 
     public List<Customer> getPaidCustomer() {
@@ -136,7 +133,7 @@ public class Restaurant {
     }
 
     public void takeOrder(Customer customer){
-        Order order = new Order(nextOrderId++, customer, customer.getMenuItem());
+        Order order = new Order(customer, customer.getMenuItem());
         activeOrders.add(order);
         customer.setStatus(CustomerStatus.ORDERED);
     }

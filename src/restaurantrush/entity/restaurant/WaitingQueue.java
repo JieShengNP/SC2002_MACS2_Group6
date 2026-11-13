@@ -7,7 +7,7 @@ import java.util.List;
 
 public class WaitingQueue {
 
-    private List<Customer> queue;
+    private final List<Customer> queue;
 
     public WaitingQueue() {
         queue = new ArrayList<>();
@@ -17,16 +17,8 @@ public class WaitingQueue {
         queue.add(customer);
     }
 
-    public Customer getCustomer(int index) {
-        return queue.get(index);
-    }
-
     public void removeCustomer(Customer customer) {
         queue.remove(customer);
-    }
-
-    public Customer removeCustomerByIndex(int index) {
-        return queue.remove(index);
     }
 
     public boolean isEmpty() {
@@ -37,7 +29,4 @@ public class WaitingQueue {
         return queue;
     }
 
-    public int size() {
-        return queue.size();
-    }
 }

@@ -4,7 +4,7 @@ import restaurantrush.entity.customer.Customer;
 
 public class Table {
 
-    private int tableNumber;
+    private final int tableNumber;
     private Customer customer;
 
     public Table(int tableNumber) {
