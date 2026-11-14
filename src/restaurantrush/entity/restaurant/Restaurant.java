@@ -270,7 +270,7 @@ public class Restaurant {
             happyHourActive = true;
             for (Customer customer : customers) {
                 CustomerStatus status = customer.getStatus();
-                if (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED) {
+                if (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED) {
                     customer.increaseSatisfaction(15);
                 }
             }
