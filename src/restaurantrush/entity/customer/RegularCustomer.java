@@ -11,4 +11,8 @@ public class RegularCustomer extends Customer {
         super(customerId, 100, 8, menuItemList, random);
     }
 
+    @Override
+    public String getCustomerType() {
+        return "Regular";
+    }
 }

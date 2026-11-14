@@ -162,7 +162,7 @@ public class Restaurant {
         if (customer != null){
             Order order = getCustomerOrder(customer);
             if (order != null) {
-                addRevenue(order.getMenuItem().getPrice());
+                addRevenue(((order.getMenuItem().getPrice() / 100 )* customer.getPaymentPercentage()));
                 customer.setStatus(CustomerStatus.PAID);
                 order.markPaid();
                 Table table = customer.getTable();
@@ -183,7 +183,7 @@ public class Restaurant {
         List<Customer> leftList = new ArrayList<>();
         for (Customer customer : customers) {
             CustomerStatus status = customer.getStatus();
-            if ((customer.getSatisfaction() == 0) && (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED)) {
+            if ((customer.isUnsatisfied()) && (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED)) {
                 if (status == CustomerStatus.WAITING) {
                     waitingQueue.removeCustomer(customer);
                 } else if (status == CustomerStatus.SEATED){

@@ -75,5 +75,13 @@ public abstract class Customer {
         return menuItem;
     }
 
+    public int getPaymentPercentage() {
+        return 100;
+    }
 
+    public boolean isUnsatisfied(){
+        return satisfaction <= 0;
+    }
+
+    public abstract String getCustomerType();
 }

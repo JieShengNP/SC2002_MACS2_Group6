@@ -59,7 +59,7 @@ public class RestaurantCLI {
             System.out.println("No customers waiting.");
         } else {
             for (Customer customer : waitingQueue.getQueue()) {
-                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
+                System.out.printf("Customer #%d (%s) | Satisfaction: %d\n", customer.getCustomerId(), customer.getCustomerType(), customer.getSatisfaction());
             }
         }
 
@@ -70,7 +70,7 @@ public class RestaurantCLI {
         } else {
             for (Table table : occupiedTables) {
                 Customer customer = table.getSeatCustomer();
-                System.out.printf("Table #%d | Customer #%d | Satisfaction: %d | Status: %s\n", table.getTableNumber(), customer.getCustomerId(), customer.getSatisfaction(), customer.getStatus());
+                System.out.printf("Table #%d | Customer #%d (%s) | Satisfaction: %d | Status: %s\n", table.getTableNumber(), customer.getCustomerId(), customer.getCustomerType(), customer.getSatisfaction(), customer.getStatus());
             }
         }
 
@@ -80,7 +80,7 @@ public class RestaurantCLI {
             System.out.println("No active orders.");
         } else {
             for (Order order : orderList) {
-                System.out.printf("Customer #%d | Order: %s | %s ", order.getCustomer().getCustomerId(), order.getMenuItem().getName(), order.getStatus().name());
+                System.out.printf("Customer #%d (%s) | Order: %s | %s ", order.getCustomer().getCustomerId(), order.getCustomer().getCustomerType(), order.getMenuItem().getName(), order.getStatus().name());
                 if (order.getStatus() == OrderStatus.PREPARING) {
                     System.out.printf("(%d/%d)\n", order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
                 } else {
@@ -99,7 +99,7 @@ public class RestaurantCLI {
             System.out.println("No customers left.");
         } else {
             for (Customer customer : leavingCustomers) {
-                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
+                System.out.printf("Customer #%d (%s) | Satisfaction: %d\n", customer.getCustomerId(), customer.getCustomerType(), customer.getSatisfaction());
             }
         }
         displaySection("Game Summary");
@@ -146,13 +146,13 @@ public class RestaurantCLI {
 
         displaySection("Targets");
 
-        System.out.printf("[%s] Paid at least 4 customers%n",
+        System.out.printf("[%s] Paid at least 4 customers\n",
                 customersTarget ? "PASS" : "FAIL");
 
-        System.out.printf("[%s] Earned at least $45.00%n",
+        System.out.printf("[%s] Earned at least $45.00\n",
                 revenueTarget ? "PASS" : "FAIL");
 
-        System.out.printf("[%s] Average satisfaction >= 60%n",
+        System.out.printf("[%s] Average satisfaction >= 60\n",
                 satisfactionTarget ? "PASS" : "FAIL");
 
         displayHeader(victory ? "FINAL RESULT: VICTORY" : "FINAL RESULT: DEFEAT");
@@ -168,7 +168,7 @@ public class RestaurantCLI {
             displaySection("Cookable Orders");
             for (Order order : orderList) {
                 Customer customer = order.getCustomer();
-                System.out.printf("Customer #%d | %s | Preparation: %d/%d\n", customer.getCustomerId(), order.getMenuItem().getName(), order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
+                System.out.printf("Customer #%d (%s) | %s | Preparation: %d/%d\n", customer.getCustomerId(), customer.getCustomerType(), order.getMenuItem().getName(), order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
             }
         } else {
             System.out.println("No orders available for cooking.");
@@ -182,7 +182,7 @@ public class RestaurantCLI {
             List<String> choices = new ArrayList<>();
             for (Order order : orderList) {
                 Customer customer = order.getCustomer();
-                System.out.printf("Customer #%d | %s | Preparation: %d/%d\n", customer.getCustomerId(), order.getMenuItem().getName(), order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
+                System.out.printf("Customer #%d (%s) | %s | Preparation: %d/%d\n", customer.getCustomerId(), customer.getCustomerType(),order.getMenuItem().getName(), order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
                 choices.add(String.valueOf(customer.getCustomerId()));
             }
             System.out.println(DIVIDER);
@@ -201,13 +201,13 @@ public class RestaurantCLI {
         if (haveEmptySeat) {
             displaySection("Seat Customer");
             for (Customer customer : waitingQueue) {
-                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
+                System.out.printf("Customer #%d (%s) | Satisfaction: %d\n", customer.getCustomerId(), customer.getCustomerType(), customer.getSatisfaction());
             }
         }
         if (!seatedCustomers.isEmpty()) {
             displaySection("Take Order");
             for (Customer customer : seatedCustomers) {
-                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
+                System.out.printf("Customer #%d (%s) | Satisfaction: %d\n", customer.getCustomerId(), customer.getCustomerType(), customer.getSatisfaction());
 
             }
         }
@@ -215,7 +215,7 @@ public class RestaurantCLI {
             displaySection("Serve Order");
             for (Order order : readyOrders) {
                 Customer customer = order.getCustomer();
-                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
+                System.out.printf("Customer #%d (%s) | Satisfaction: %d\n", customer.getCustomerId(), customer.getCustomerType(), customer.getSatisfaction());
             }
         }
         System.out.println(DIVIDER);
@@ -226,7 +226,7 @@ public class RestaurantCLI {
             displayHeader("SELECT CUSTOMER TO SEAT");
             List<String> choices = new ArrayList<>();
             for (Customer customer : waitingList) {
-                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
+                System.out.printf("Customer #%d (%s) | Satisfaction: %d\n", customer.getCustomerId(), customer.getCustomerType(), customer.getSatisfaction());
                 choices.add(String.valueOf(customer.getCustomerId()));
             }
             System.out.println(DIVIDER);
@@ -246,7 +246,7 @@ public class RestaurantCLI {
             List<String> choices = new ArrayList<>();
             for (Customer customer : seatedList) {
                 if (customer.getStatus() == CustomerStatus.SEATED) {
-                    System.out.printf("Customer #%d | Order: %s\n", customer.getCustomerId(), customer.getMenuItem().getName());
+                    System.out.printf("Customer #%d (%s) | Order: %s\n", customer.getCustomerId(), customer.getCustomerType(), customer.getMenuItem().getName());
                     choices.add(String.valueOf(customer.getCustomerId()));
                 }
             }
@@ -268,7 +268,7 @@ public class RestaurantCLI {
             for (Order order : readyOrderList) {
                 if (order.getStatus() == OrderStatus.READY) {
                     Customer customer = order.getCustomer();
-                    System.out.printf("Customer #%d | Order: %s\n", customer.getCustomerId(), customer.getMenuItem().getName());
+                    System.out.printf("Customer #%d (%s) | Order: %s\n", customer.getCustomerId(), customer.getCustomerType(), customer.getMenuItem().getName());
                     choices.add(String.valueOf(customer.getCustomerId()));
                 }
             }

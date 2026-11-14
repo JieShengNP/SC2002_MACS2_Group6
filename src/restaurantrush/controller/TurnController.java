@@ -1,7 +1,9 @@
 package restaurantrush.controller;
 
+import restaurantrush.entity.customer.CriticCustomer;
 import restaurantrush.entity.customer.Customer;
 import restaurantrush.entity.customer.RegularCustomer;
+import restaurantrush.entity.customer.VIPCustomer;
 import restaurantrush.entity.restaurant.Restaurant;
 import restaurantrush.entity.restaurant.WaitingQueue;
 import restaurantrush.entity.staff.Staff;
@@ -36,7 +38,14 @@ public class TurnController {
     private void handleArrivals(int turnNumber) {
         if ((turnNumber % 3) == 1) {
             WaitingQueue queue = restaurant.getWaitingQueue();
-            Customer newCustomer = new RegularCustomer(nextCustomerId++, restaurant.getMenuItemList(), random);
+            Customer newCustomer;
+            if (turnNumber == 1){
+                newCustomer = new CriticCustomer(nextCustomerId++, restaurant.getMenuItemList(), random);
+            } else if (turnNumber == 4){
+                newCustomer = new VIPCustomer(nextCustomerId++, restaurant.getMenuItemList(), random);
+            } else {
+                newCustomer = new RegularCustomer(nextCustomerId++, restaurant.getMenuItemList(), random);
+            }
             queue.addCustomer(newCustomer);
             restaurant.getCustomers().add(newCustomer);
         }

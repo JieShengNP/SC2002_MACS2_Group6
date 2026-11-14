@@ -1,0 +1,1267 @@
+
+========================================
+              TURN 1 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 100
+
+OCCUPIED TABLES (0)
+----------------------------------------
+No occupied tables.
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 100
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 1 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 1
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 2 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 88
+
+OCCUPIED TABLES (0)
+----------------------------------------
+No occupied tables.
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 88
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 2 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 2
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 3 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 76
+
+OCCUPIED TABLES (0)
+----------------------------------------
+No occupied tables.
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 76
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 3 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 3
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 4 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (2)
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 64
+Customer #2 (VIP) | Satisfaction: 100
+
+OCCUPIED TABLES (0)
+----------------------------------------
+No occupied tables.
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 64
+Customer #2 (VIP) | Satisfaction: 100
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 4 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 4
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 5 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (2)
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 52
+Customer #2 (VIP) | Satisfaction: 95
+
+OCCUPIED TABLES (0)
+----------------------------------------
+No occupied tables.
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 52
+Customer #2 (VIP) | Satisfaction: 95
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #1 (Critic) | Satisfaction: 52
+Customer #2 (VIP) | Satisfaction: 95
+----------------------------------------
+Available Choices: 1/2
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 5 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 40
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   1
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 5
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 6 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #2 (VIP) | Satisfaction: 90
+
+OCCUPIED TABLES (0)
+----------------------------------------
+No occupied tables.
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #2 (VIP) | Satisfaction: 90
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #2 (VIP) | Satisfaction: 90
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 6 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   1
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 6
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 7 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 100
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #1 | Customer #2 (VIP) | Satisfaction: 85 | Status: SEATED
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 100
+
+TAKE ORDER
+----------------------------------------
+Customer #2 (VIP) | Satisfaction: 85
+----------------------------------------
+Available Actions: SEAT / TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #2 (VIP) | Order: Pasta
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #2 (VIP) | Pasta | Preparation: 0/2
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #2 (VIP) | Pasta | Preparation: 0/2
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+           END OF TURN 7 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   1
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 7
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 8 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 92
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #1 | Customer #2 (VIP) | Satisfaction: 80 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #2 (VIP) | Order: Pasta | PREPARING (1/2)
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 92
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #3 (Regular) | Satisfaction: 92
+----------------------------------------
+Available Choices: 3
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #2 (VIP) | Pasta | Preparation: 1/2
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #2 (VIP) | Pasta | Preparation: 1/2
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+           END OF TURN 8 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   1
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 8
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 9 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #2 (VIP) | Satisfaction: 75 | Status: ORDERED
+Table #2 | Customer #3 (Regular) | Satisfaction: 84 | Status: SEATED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #2 (VIP) | Order: Pasta | READY 
+
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 84
+
+SERVE ORDER
+----------------------------------------
+Customer #2 (VIP) | Satisfaction: 75
+----------------------------------------
+Available Actions: TAKE / SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #2 (VIP) | Order: Pasta
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 9 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   1
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 9
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 10 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 100
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #2 (VIP) | Satisfaction: 75 | Status: EATING
+Table #2 | Customer #3 (Regular) | Satisfaction: 76 | Status: SEATED
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 76
+----------------------------------------
+Available Actions: TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #3 (Regular) | Order: Burger
+----------------------------------------
+Available Choices: 3
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #3 (Regular) | Burger | Preparation: 0/1
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #3 (Regular) | Burger | Preparation: 0/1
+----------------------------------------
+Available Choices: 3
+
+Choose Customer: 
+========================================
+          END OF TURN 10 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   1
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 10
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 11 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 92
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #2 (VIP) | Satisfaction: 75 | Status: READY_TO_PAY
+Table #2 | Customer #3 (Regular) | Satisfaction: 68 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #3 (Regular) | Order: Burger | READY 
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SERVE ORDER
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 68
+----------------------------------------
+Available Actions: SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #3 (Regular) | Order: Burger
+----------------------------------------
+Available Choices: 3
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 11 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   1
+Current Revenue:            $16.20
+Average Paid Satisfaction:  75.00
+Turns Used:                 11
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 12 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $16.20
+Average Paid Satisfaction:  75.00
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 84
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #2 | Customer #3 (Regular) | Satisfaction: 68 | Status: EATING
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 84
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #4 (Regular) | Satisfaction: 84
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 12 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   1
+Current Revenue:            $16.20
+Average Paid Satisfaction:  75.00
+Turns Used:                 12
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 13 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $16.20
+Average Paid Satisfaction:  75.00
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 100
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #4 (Regular) | Satisfaction: 76 | Status: SEATED
+Table #2 | Customer #3 (Regular) | Satisfaction: 68 | Status: READY_TO_PAY
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 76
+----------------------------------------
+Available Actions: TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #4 (Regular) | Order: Pasta
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #4 (Regular) | Pasta | Preparation: 0/2
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #4 (Regular) | Pasta | Preparation: 0/2
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+          END OF TURN 13 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       2
+Total Unhappy Departures:   1
+Current Revenue:            $31.20
+Average Paid Satisfaction:  71.50
+Turns Used:                 13
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 14 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $31.20
+Average Paid Satisfaction:  71.50
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 92
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #1 | Customer #4 (Regular) | Satisfaction: 68 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #4 (Regular) | Order: Pasta | PREPARING (1/2)
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 92
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #5 (Regular) | Satisfaction: 92
+----------------------------------------
+Available Choices: 5
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #4 (Regular) | Pasta | Preparation: 1/2
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #4 (Regular) | Pasta | Preparation: 1/2
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+          END OF TURN 14 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       2
+Total Unhappy Departures:   1
+Current Revenue:            $31.20
+Average Paid Satisfaction:  71.50
+Turns Used:                 14
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 15 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $31.20
+Average Paid Satisfaction:  71.50
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #4 (Regular) | Satisfaction: 60 | Status: ORDERED
+Table #2 | Customer #5 (Regular) | Satisfaction: 84 | Status: SEATED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #4 (Regular) | Order: Pasta | READY 
+
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 84
+
+SERVE ORDER
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 60
+----------------------------------------
+Available Actions: TAKE / SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #4 (Regular) | Order: Pasta
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 15 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       2
+Total Unhappy Departures:   1
+Current Revenue:            $31.20
+Average Paid Satisfaction:  71.50
+Turns Used:                 15
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 16 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $31.20
+Average Paid Satisfaction:  71.50
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #6 (Regular) | Satisfaction: 100
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #4 (Regular) | Satisfaction: 60 | Status: EATING
+Table #2 | Customer #5 (Regular) | Satisfaction: 76 | Status: SEATED
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 76
+----------------------------------------
+Available Actions: TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #5 (Regular) | Order: Salad
+----------------------------------------
+Available Choices: 5
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #5 (Regular) | Salad | Preparation: 0/1
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #5 (Regular) | Salad | Preparation: 0/1
+----------------------------------------
+Available Choices: 5
+
+Choose Customer: 
+========================================
+          END OF TURN 16 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       2
+Total Unhappy Departures:   1
+Current Revenue:            $31.20
+Average Paid Satisfaction:  71.50
+Turns Used:                 16
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 17 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $31.20
+Average Paid Satisfaction:  71.50
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #6 (Regular) | Satisfaction: 92
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #4 (Regular) | Satisfaction: 60 | Status: READY_TO_PAY
+Table #2 | Customer #5 (Regular) | Satisfaction: 68 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #5 (Regular) | Order: Salad | READY 
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SERVE ORDER
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 68
+----------------------------------------
+Available Actions: SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #5 (Regular) | Order: Salad
+----------------------------------------
+Available Choices: 5
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 17 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       3
+Total Unhappy Departures:   1
+Current Revenue:            $49.20
+Average Paid Satisfaction:  67.67
+Turns Used:                 17
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 18 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $49.20
+Average Paid Satisfaction:  67.67
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #6 (Regular) | Satisfaction: 84
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #2 | Customer #5 (Regular) | Satisfaction: 68 | Status: EATING
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+             WAITER ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #6 (Regular) | Satisfaction: 84
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Waiter Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #6 (Regular) | Satisfaction: 84
+----------------------------------------
+Available Choices: 6
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 18 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       3
+Total Unhappy Departures:   1
+Current Revenue:            $49.20
+Average Paid Satisfaction:  67.67
+Turns Used:                 18
+========================================
+
+Press ENTER to continue...
+========================================
+      RESTAURANT RUSH - GAME OVER
+========================================
+DEFEAT! YOU DID NOT MEET ALL TARGETS!
+
+FINAL RESULTS
+----------------------------------------
+Paid Customers:             3 / 4
+Total Revenue:              $49.20 / $45.00
+Average Satisfaction:       67.67 / 60.00
+
+TARGETS
+----------------------------------------
+[FAIL] Paid at least 4 customers
+[PASS] Earned at least $45.00
+[PASS] Average satisfaction >= 60
+
+========================================
+          FINAL RESULT: DEFEAT
+========================================
