@@ -19,7 +19,7 @@ public class Chef extends Staff {
         }
         actionsList.add("WAIT");
         while (true) {
-            String choice = cli.getPrompt(String.format("Choose Chef Action (%s): ", String.join("/", actionsList)));
+            String choice = cli.getPrompt(String.format("Available Actions: %s\n\nChoose Chef Action: ", String.join(" / ", actionsList)));
             if (actionsList.stream().anyMatch(choice::equalsIgnoreCase)) {
                 if (choice.equalsIgnoreCase("COOK")) {
                     cookOrder(restaurant, cli);

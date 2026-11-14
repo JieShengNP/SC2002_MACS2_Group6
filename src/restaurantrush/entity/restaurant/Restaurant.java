@@ -206,17 +206,6 @@ public class Restaurant {
         return leftList;
     }
 
-    public int getServedCount(){
-        int count = 0;
-        for (Customer customer: customers){
-            CustomerStatus status = customer.getStatus();
-            if (status == CustomerStatus.SERVED || status == CustomerStatus.EATING || status == CustomerStatus.READY_TO_PAY || status == CustomerStatus.PAID){
-                count++;
-            }
-        }
-        return count;
-    }
-
     public List<Staff> getStaffList(){
         return staffList;
     }

@@ -32,7 +32,7 @@ public class Waiter extends Staff {
         actionsList.add("WAIT");
 
         while (true) {
-            String choice = cli.getPrompt(String.format("Choose Waiter Action (%s): ", String.join("/", actionsList)));
+            String choice = cli.getPrompt(String.format("Available Actions: %s\n\nChoose Waiter Action: ", String.join(" / ", actionsList)));
             if (actionsList.stream().anyMatch(choice::equalsIgnoreCase)) {
                 if (choice.equalsIgnoreCase("SEAT")) {
                     seatCustomer(restaurant, cli);

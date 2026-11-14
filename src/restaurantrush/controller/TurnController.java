@@ -29,7 +29,7 @@ public class TurnController {
         updateSatisfaction();
         cli.displayEndTurnStats(restaurant, turnNumber);
         updateCustomerStatus();
-
+        cli.pressEnterToContinue();
     }
 
 
