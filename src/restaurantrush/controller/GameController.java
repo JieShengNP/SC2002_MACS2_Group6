@@ -9,7 +9,7 @@ public class GameController {
 
     public static final int MAX_TURNS = 18;
     public static final long GAME_SEED = 2002L;
-    protected Random random;
+    private final Random random;
 
     private final Restaurant restaurant;
     private final RestaurantCLI cli;

@@ -1,9 +1,9 @@
 package restaurantrush.entity.menu;
 
 public abstract class MenuItem {
-    protected String name;
-    protected int price;
-    protected int preparationUnit;
+    private final String name;
+    private final int price;
+    private final int preparationUnit;
 
     public MenuItem(String name, int price, int preparationUnit) {
         this.name = name;

@@ -8,12 +8,12 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class Customer {
-    protected int customerId;
-    protected int satisfaction;
-    protected CustomerStatus status;
-    protected Table table;
-    protected MenuItem menuItem;
-    protected int satisfactionLossRate;
+    private final int customerId;
+    private int satisfaction;
+    private CustomerStatus status;
+    private Table table;
+    private final MenuItem menuItem;
+    private final int satisfactionLossRate;
 
     public Customer(int customerId, int satisfaction, int satisfactionLossRate, List<MenuItem> menuItemList, Random random) {
         this.customerId = customerId;
