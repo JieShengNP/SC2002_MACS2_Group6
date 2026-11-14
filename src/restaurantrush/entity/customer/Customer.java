@@ -110,4 +110,8 @@ public abstract class Customer {
     }
 
     public abstract String getCustomerType();
+
+    public void increaseSatisfaction(int amount){
+        this.satisfaction = Math.min(100, satisfaction + amount);
+    }
 }

@@ -1,0 +1,1478 @@
+
+========================================
+         HAPPY HOUR AVAILABLE!
+========================================
+Activate Happy Hour For 2 Turns? (Y / N): 
+========================================
+              TURN 1 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 100
+
+OCCUPIED TABLES (0)
+----------------------------------------
+No occupied tables.
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+              HOST ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 100
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Host Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #1 (Critic) | Satisfaction: 100
+----------------------------------------
+Available Choices: 1
+
+Choose Customer: 
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 100
+----------------------------------------
+Available Actions: TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #1 (Critic) | Order: Pasta
+----------------------------------------
+Available Choices: 1
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #1 (Critic) | Pasta | Preparation: 0/2
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #1 (Critic) | Pasta | Preparation: 0/2
+----------------------------------------
+Available Choices: 1
+
+Choose Customer: 
+========================================
+           END OF TURN 1 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 1
+========================================
+
+Press ENTER to continue...
+========================================
+         HAPPY HOUR AVAILABLE!
+========================================
+Activate Happy Hour For 2 Turns? (Y / N): 
+========================================
+              TURN 2 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #1 | Customer #1 (Critic) | Satisfaction: 88 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #1 (Critic) | Order: Pasta | PREPARING (1/2)
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #1 (Critic) | Pasta | Preparation: 1/2
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #1 (Critic) | Pasta | Preparation: 1/2
+----------------------------------------
+Available Choices: 1
+
+Choose Customer: 
+========================================
+           END OF TURN 2 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 2
+========================================
+
+Press ENTER to continue...
+========================================
+         HAPPY HOUR AVAILABLE!
+========================================
+Activate Happy Hour For 2 Turns? (Y / N): 
+========================================
+              TURN 3 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #1 | Customer #1 (Critic) | Satisfaction: 76 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #1 (Critic) | Order: Pasta | READY 
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+
+SERVE ORDER
+----------------------------------------
+Customer #1 (Critic) | Satisfaction: 76
+----------------------------------------
+Available Actions: SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #1 (Critic) | Order: Pasta
+----------------------------------------
+Available Choices: 1
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 3 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 3
+========================================
+
+Press ENTER to continue...
+========================================
+         HAPPY HOUR AVAILABLE!
+========================================
+Activate Happy Hour For 2 Turns? (Y / N): 
+========================================
+              TURN 4 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #2 (VIP) | Satisfaction: 100
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #1 | Customer #1 (Critic) | Satisfaction: 76 | Status: EATING
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+    HAPPY HOUR ACTIVE! - 1 TURN LEFT
+========================================
+
+========================================
+              HOST ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #2 (VIP) | Satisfaction: 100
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Host Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #2 (VIP) | Satisfaction: 100
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #2 (VIP) | Satisfaction: 100
+----------------------------------------
+Available Actions: TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #2 (VIP) | Order: Combo Meal (Pasta + Salad)
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #2 (VIP) | Combo Meal (Pasta + Salad) | Preparation: 0/3
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #2 (VIP) | Combo Meal (Pasta + Salad) | Preparation: 0/3
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+           END OF TURN 4 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 4
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 5 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #1 (Critic) | Satisfaction: 76 | Status: READY_TO_PAY
+Table #2 | Customer #2 (VIP) | Satisfaction: 95 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #2 (VIP) | Order: Combo Meal (Pasta + Salad) | PREPARING (1/3)
+
+========================================
+     HAPPY HOUR ACTIVE! - LAST TURN
+========================================
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #2 (VIP) | Combo Meal (Pasta + Salad) | Preparation: 1/3
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #2 (VIP) | Combo Meal (Pasta + Salad) | Preparation: 1/3
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+           END OF TURN 5 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   0
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+Turns Used:                 5
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 6 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #2 | Customer #2 (VIP) | Satisfaction: 90 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #2 (VIP) | Order: Combo Meal (Pasta + Salad) | PREPARING (2/3)
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #2 (VIP) | Combo Meal (Pasta + Salad) | Preparation: 2/3
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #2 (VIP) | Combo Meal (Pasta + Salad) | Preparation: 2/3
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+           END OF TURN 6 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   0
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+Turns Used:                 6
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 7 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 100
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #2 | Customer #2 (VIP) | Satisfaction: 85 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #2 (VIP) | Order: Combo Meal (Pasta + Salad) | READY 
+
+========================================
+              HOST ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Host Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #3 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Choices: 3
+
+Choose Customer: 
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 100
+
+SERVE ORDER
+----------------------------------------
+Customer #2 (VIP) | Satisfaction: 85
+----------------------------------------
+Available Actions: TAKE / SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #2 (VIP) | Order: Combo Meal (Pasta + Salad)
+----------------------------------------
+Available Choices: 2
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 7 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   0
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+Turns Used:                 7
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 8 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #3 (Regular) | Satisfaction: 92 | Status: SEATED
+Table #2 | Customer #2 (VIP) | Satisfaction: 85 | Status: EATING
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 92
+----------------------------------------
+Available Actions: TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #3 (Regular) | Order: Salad
+----------------------------------------
+Available Choices: 3
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #3 (Regular) | Salad | Preparation: 0/1
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #3 (Regular) | Salad | Preparation: 0/1
+----------------------------------------
+Available Choices: 3
+
+Choose Customer: 
+========================================
+           END OF TURN 8 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   0
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+Turns Used:                 8
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 9 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #3 (Regular) | Satisfaction: 84 | Status: ORDERED
+Table #2 | Customer #2 (VIP) | Satisfaction: 85 | Status: READY_TO_PAY
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #3 (Regular) | Order: Salad | READY 
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+
+SERVE ORDER
+----------------------------------------
+Customer #3 (Regular) | Satisfaction: 84
+----------------------------------------
+Available Actions: SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #3 (Regular) | Order: Salad
+----------------------------------------
+Available Choices: 3
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+           END OF TURN 9 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       2
+Total Unhappy Departures:   0
+Current Revenue:            $35.49
+Average Paid Satisfaction:  80.50
+Turns Used:                 9
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 10 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $35.49
+Average Paid Satisfaction:  80.50
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 100
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #1 | Customer #3 (Regular) | Satisfaction: 84 | Status: EATING
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+              HOST ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Host Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #4 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Actions: TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #4 (Regular) | Order: Pasta
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #4 (Regular) | Pasta | Preparation: 0/2
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #4 (Regular) | Pasta | Preparation: 0/2
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+          END OF TURN 10 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       2
+Total Unhappy Departures:   0
+Current Revenue:            $35.49
+Average Paid Satisfaction:  80.50
+Turns Used:                 10
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 11 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $35.49
+Average Paid Satisfaction:  80.50
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #3 (Regular) | Satisfaction: 84 | Status: READY_TO_PAY
+Table #2 | Customer #4 (Regular) | Satisfaction: 92 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #4 (Regular) | Order: Pasta | PREPARING (1/2)
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #4 (Regular) | Pasta | Preparation: 1/2
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #4 (Regular) | Pasta | Preparation: 1/2
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+          END OF TURN 11 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       3
+Total Unhappy Departures:   0
+Current Revenue:            $44.49
+Average Paid Satisfaction:  81.67
+Turns Used:                 11
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 12 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $44.49
+Average Paid Satisfaction:  81.67
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #2 | Customer #4 (Regular) | Satisfaction: 84 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #4 (Regular) | Order: Pasta | READY 
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+
+SERVE ORDER
+----------------------------------------
+Customer #4 (Regular) | Satisfaction: 84
+----------------------------------------
+Available Actions: SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #4 (Regular) | Order: Pasta
+----------------------------------------
+Available Choices: 4
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 12 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       3
+Total Unhappy Departures:   0
+Current Revenue:            $44.49
+Average Paid Satisfaction:  81.67
+Turns Used:                 12
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 13 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $44.49
+Average Paid Satisfaction:  81.67
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 100
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #2 | Customer #4 (Regular) | Satisfaction: 84 | Status: EATING
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+              HOST ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Host Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #5 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Choices: 5
+
+Choose Customer: 
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Actions: TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #5 (Regular) | Order: Burger
+----------------------------------------
+Available Choices: 5
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #5 (Regular) | Burger | Preparation: 0/1
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #5 (Regular) | Burger | Preparation: 0/1
+----------------------------------------
+Available Choices: 5
+
+Choose Customer: 
+========================================
+          END OF TURN 13 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       3
+Total Unhappy Departures:   0
+Current Revenue:            $44.49
+Average Paid Satisfaction:  81.67
+Turns Used:                 13
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 14 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $44.49
+Average Paid Satisfaction:  81.67
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (2)
+----------------------------------------
+Table #1 | Customer #5 (Regular) | Satisfaction: 92 | Status: ORDERED
+Table #2 | Customer #4 (Regular) | Satisfaction: 84 | Status: READY_TO_PAY
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #5 (Regular) | Order: Burger | READY 
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+
+SERVE ORDER
+----------------------------------------
+Customer #5 (Regular) | Satisfaction: 92
+----------------------------------------
+Available Actions: SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #5 (Regular) | Order: Burger
+----------------------------------------
+Available Choices: 5
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 14 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       4
+Total Unhappy Departures:   0
+Current Revenue:            $62.49
+Average Paid Satisfaction:  82.25
+Turns Used:                 14
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 15 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $62.49
+Average Paid Satisfaction:  82.25
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #1 | Customer #5 (Regular) | Satisfaction: 92 | Status: EATING
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 15 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       4
+Total Unhappy Departures:   0
+Current Revenue:            $62.49
+Average Paid Satisfaction:  82.25
+Turns Used:                 15
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 16 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $62.49
+Average Paid Satisfaction:  82.25
+
+WAITING QUEUE (1)
+----------------------------------------
+Customer #6 (Regular) | Satisfaction: 100
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #1 | Customer #5 (Regular) | Satisfaction: 92 | Status: READY_TO_PAY
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+              HOST ACTIONS
+========================================
+
+SEAT CUSTOMER
+----------------------------------------
+Customer #6 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Actions: SEAT / WAIT
+
+Choose Host Action: 
+========================================
+        SELECT CUSTOMER TO SEAT
+========================================
+Customer #6 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Choices: 6
+
+Choose Customer: 
+========================================
+             WAITER ACTIONS
+========================================
+
+TAKE ORDER
+----------------------------------------
+Customer #6 (Regular) | Satisfaction: 100
+----------------------------------------
+Available Actions: TAKE / WAIT
+
+Choose Waiter Action: 
+========================================
+     SELECT CUSTOMER TO TAKE ORDER
+========================================
+Customer #6 (Regular) | Order: Burger
+----------------------------------------
+Available Choices: 6
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+
+COOKABLE ORDERS
+----------------------------------------
+Customer #6 (Regular) | Burger | Preparation: 0/1
+----------------------------------------
+Available Actions: COOK / WAIT
+
+Choose Chef Action: 
+========================================
+          SELECT ORDER TO COOK
+========================================
+Customer #6 (Regular) | Burger | Preparation: 0/1
+----------------------------------------
+Available Choices: 6
+
+Choose Customer: 
+========================================
+          END OF TURN 16 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       5
+Total Unhappy Departures:   0
+Current Revenue:            $77.49
+Average Paid Satisfaction:  84.20
+Turns Used:                 16
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 17 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $77.49
+Average Paid Satisfaction:  84.20
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #2 | Customer #6 (Regular) | Satisfaction: 92 | Status: ORDERED
+
+ACTIVE ORDERS (1)
+----------------------------------------
+Customer #6 (Regular) | Order: Burger | READY 
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+
+SERVE ORDER
+----------------------------------------
+Customer #6 (Regular) | Satisfaction: 92
+----------------------------------------
+Available Actions: SERVE / WAIT
+
+Choose Waiter Action: 
+========================================
+      SELECT CUSTOMER TO SERVE TO
+========================================
+Customer #6 (Regular) | Order: Burger
+----------------------------------------
+Available Choices: 6
+
+Choose Customer: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 17 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       5
+Total Unhappy Departures:   0
+Current Revenue:            $77.49
+Average Paid Satisfaction:  84.20
+Turns Used:                 17
+========================================
+
+Press ENTER to continue...
+========================================
+              TURN 18 / 18
+========================================
+
+RESTAURANT OVERVIEW
+----------------------------------------
+Current Revenue:            $77.49
+Average Paid Satisfaction:  84.20
+
+WAITING QUEUE (0)
+----------------------------------------
+No customers waiting.
+
+OCCUPIED TABLES (1)
+----------------------------------------
+Table #2 | Customer #6 (Regular) | Satisfaction: 92 | Status: EATING
+
+ACTIVE ORDERS (0)
+----------------------------------------
+No active orders.
+
+========================================
+              HOST ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Host Action: 
+========================================
+             WAITER ACTIONS
+========================================
+----------------------------------------
+Available Actions: WAIT
+
+Choose Waiter Action: 
+========================================
+              CHEF ACTIONS
+========================================
+No orders available for cooking.
+----------------------------------------
+Available Actions: WAIT
+
+Choose Chef Action: 
+========================================
+          END OF TURN 18 / 18
+========================================
+
+CUSTOMERS WHO LEFT
+----------------------------------------
+No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       5
+Total Unhappy Departures:   0
+Current Revenue:            $77.49
+Average Paid Satisfaction:  84.20
+Turns Used:                 18
+========================================
+
+Press ENTER to continue...
+========================================
+      RESTAURANT RUSH - GAME OVER
+========================================
+CONGRATULATIONS! YOU WON!
+
+FINAL RESULTS
+----------------------------------------
+Paid Customers:             5 / 4
+Total Revenue:              $77.49 / $45.00
+Average Satisfaction:       84.20 / 60.00
+
+TARGETS
+----------------------------------------
+[PASS] Paid at least 4 customers
+[PASS] Earned at least $45.00
+[PASS] Average satisfaction >= 60
+
+========================================
+         FINAL RESULT: VICTORY
+========================================

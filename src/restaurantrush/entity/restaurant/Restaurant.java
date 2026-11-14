@@ -21,6 +21,8 @@ public class Restaurant {
     private final List<MenuItem> menuItemList;
     private final Queue<Customer> paymentQueue;
     private final List<Staff> staffList;
+    private int happyHourTurn = -1;
+    private boolean happyHourActive = false;
 
     public Restaurant() {
         tables = new ArrayList<>();
@@ -130,7 +132,7 @@ public class Restaurant {
     }
 
     public void takeOrder(Customer customer){
-        Order order = new Order(customer, customer.getMenuItem());
+        Order order = new Order(customer, customer.getMenuItem(), happyHourActive);
         activeOrders.add(order);
         customer.setStatus(CustomerStatus.ORDERED);
     }
@@ -159,7 +161,12 @@ public class Restaurant {
         if (customer != null){
             Order order = getCustomerOrder(customer);
             if (order != null) {
-                addRevenue(((order.getMenuItem().getPrice() * customer.getPaymentPercentage()) / 100));
+                int orderRevenue = order.getMenuItem().getPrice();
+                orderRevenue = (orderRevenue * customer.getPaymentPercentage() / 100);
+                if (order.isHappyHour()){
+                    orderRevenue = ((orderRevenue * 80) / 100);
+                }
+                addRevenue(orderRevenue);
                 customer.setStatus(CustomerStatus.PAID);
                 order.markPaid();
                 Table table = customer.getTable();
@@ -235,5 +242,40 @@ public class Restaurant {
             }
         }
         return count;
+    }
+
+    public boolean isHappyHourUsed(){
+        return (happyHourTurn != -1);
+    }
+
+    private boolean isHappyHourTurn(int turnNumber){
+        return turnNumber - happyHourTurn == 1 || turnNumber - happyHourTurn == 0;
+    }
+
+    public boolean isHappyHourActive(){
+        return happyHourActive;
+    }
+
+    public int getHappyHourTurnLeft(int turnNumber){
+        return (happyHourTurn + 1 - turnNumber);
+    }
+
+    public void activateHappyHour(int turnNumber){
+        this.happyHourTurn = turnNumber;
+        handleHappyHour(turnNumber);
+    }
+
+    public void handleHappyHour(int turnNumber){
+        if (isHappyHourTurn(turnNumber)){
+            happyHourActive = true;
+            for (Customer customer : customers) {
+                CustomerStatus status = customer.getStatus();
+                if (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED) {
+                    customer.increaseSatisfaction(15);
+                }
+            }
+        } else {
+            happyHourActive = false;
+        }
     }
 }

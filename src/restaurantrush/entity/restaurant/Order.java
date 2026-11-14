@@ -10,12 +10,14 @@ public class Order {
     private OrderStatus status;
     private final int requiredPreparationUnits;
     private int currentPreparationUnits = 0;
+    private final boolean isHappyHour;
 
-    public Order(Customer customer, MenuItem menuItem) {
+    public Order(Customer customer, MenuItem menuItem, boolean isHappyHour) {
         this.customer = customer;
         this.menuItem = menuItem;
         status = OrderStatus.ORDERED;
         requiredPreparationUnits = menuItem.getPreparationUnit();
+        this.isHappyHour = isHappyHour;
     }
 
     public void prepare() {
@@ -57,5 +59,9 @@ public class Order {
 
     public int getCurrentPreparationUnits() {
         return currentPreparationUnits;
+    }
+
+    public boolean isHappyHour() {
+        return isHappyHour;
     }
 }

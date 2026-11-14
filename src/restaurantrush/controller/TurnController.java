@@ -26,12 +26,23 @@ public class TurnController {
 
     public void nextTurn(int turnNumber) {
         handleArrivals(turnNumber);
+        handleHappyHour(turnNumber);
         cli.displayStartTurnStats(restaurant, turnNumber);
         handleStaffActions();
         updateSatisfaction();
         cli.displayEndTurnStats(restaurant, turnNumber);
         updateCustomerStatus();
         cli.pressEnterToContinue();
+    }
+
+    public void handleHappyHour(int turnNumber){
+        if (!restaurant.isHappyHourUsed()){
+            if (cli.askActivateHappyHour()){
+                restaurant.activateHappyHour(turnNumber);
+            }
+        } else {
+            restaurant.handleHappyHour(turnNumber);
+        }
     }
 
 

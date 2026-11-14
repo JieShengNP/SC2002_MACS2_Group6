@@ -88,7 +88,13 @@ public class RestaurantCLI {
                 }
             }
         }
-
+        if (restaurant.isHappyHourActive()){
+            if (restaurant.getHappyHourTurnLeft(turnNumber) == 1) {
+                displayHeader("HAPPY HOUR ACTIVE! - 1 TURN LEFT");
+            } else if (restaurant.getHappyHourTurnLeft(turnNumber) == 0) {
+                displayHeader("HAPPY HOUR ACTIVE! - LAST TURN");
+            }
+        }
     }
 
     public void displayEndTurnStats(Restaurant restaurant, int turnNumber) {
@@ -290,6 +296,18 @@ public class RestaurantCLI {
                 }
             }
             displayInvalidChoice();
+        }
+    }
+
+    public boolean askActivateHappyHour(){
+        while (true){
+            displayHeader("HAPPY HOUR AVAILABLE!");
+            String choice = getPrompt("Activate Happy Hour For 2 Turns? (Y / N): ");
+            if (choice.equalsIgnoreCase("Y")){
+                return true;
+            } else if (choice.equalsIgnoreCase("N")){
+                return false;
+            }
         }
     }
 }
