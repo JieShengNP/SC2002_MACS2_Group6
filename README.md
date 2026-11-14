@@ -132,64 +132,71 @@ src/
 ---
 
 # Running the Program
+
 ## Prerequisites
 
 - Java 21
-- IDE such as IntelliJ IDEA or Eclipse
+- Git
 
-## Running the Program
+## 1. Clone the Repository
 
-1. Clone the repository.
-2. Open the project in your IDE.
-3. Compile the source files.
-4. Run Main.java.
-5. Follow the command-line prompts to manage the restaurant.
+```bash
+git clone https://github.com/JieShengNP/SC2002_MACS2_Group6.git
+cd SC2002_MACS2_Group6
+```
 
-## Deterministic Execution & Test Runs
+## 2. View a Specific Development Stage
 
-The application uses a fixed random seed of `2002` for all pseudo-random behaviour.
+The repository preserves the software evolution through Git tags.
 
-Using a fixed seed ensures deterministic execution, allowing game simulations to be reproduced consistently across different runs. This facilitates verification and assessment of the implemented functionality.
+View the Stage 1 implementation:
 
-Test artefacts are provided in the test-run/ folder:
+```bash
+git checkout stage-1
+```
 
-- test-run/
+View the Stage 2 implementation:
 
-  - test.md
+```bash
+git checkout stage-2
+```
 
-  - victory.txt
+View the Stage 3 implementation:
 
-  - victory-output.txt
+```bash
+git checkout stage-3
+```
 
-  - victory-stage2.txt
+Return to the latest version:
 
-  - victory-stage2-output.txt
+```bash
+git checkout main
+```
 
-  - victory-stage3.txt
+## 3. Compile the Project
 
-  - victory-stage3-output.txt
+From the project root directory, run:
 
-  - defeat.txt
+```bash
+javac -d out -sourcepath src src/restaurantrush/Main.java
+```
 
-  - defeat-output.txt
+## 4. Run the Program
 
-  - defeat-stage2.txt
+```bash
+java -cp out restaurantrush.Main
+```
 
-  - defeat-stage2-output.txt
+Follow the command-line prompts to manage the restaurant.
 
-  - defeat-stage3.txt
+## 5. Automated Test Runs
 
-  - defeat-stage3-output.txt
+Instructions for executing the reproducible test cases are provided in `test-runs/test.md`.
 
-The provided test cases include:
-
-- Reproducible victory scenarios for Stage 1, Stage 2 and Stage 3.
-- Reproducible defeat scenarios for Stage 1, Stage 2 and Stage 3.
-- Corresponding expected output files for verification.
-- A test.md guide describing how to execute each test case.
-
-Running the program with the provided input files and random seed `2002` will produce the corresponding output files included in the repository.
-
+The `test-runs` folder contains:
+- Victory scenarios for Stage 1, Stage 2 and Stage 3.
+- Defeat scenarios for Stage 1, Stage 2 and Stage 3.
+- Corresponding expected output files.
 
 ---
 
