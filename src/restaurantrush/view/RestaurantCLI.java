@@ -80,7 +80,7 @@ public class RestaurantCLI {
             System.out.println("No active orders.");
         } else {
             for (Order order : orderList) {
-                System.out.printf("Customer: %d | Order: %s | %s ", order.getCustomer().getCustomerId(), order.getMenuItem().getName(), order.getStatus().name());
+                System.out.printf("Customer #%d | Order: %s | %s ", order.getCustomer().getCustomerId(), order.getMenuItem().getName(), order.getStatus().name());
                 if (order.getStatus() == OrderStatus.PREPARING) {
                     System.out.printf("(%d/%d)\n", order.getCurrentPreparationUnits(), order.getRequiredPreparationUnits());
                 } else {
@@ -200,23 +200,23 @@ public class RestaurantCLI {
         if (haveEmptySeat) {
             displaySection("Seat Customer");
             for (Customer customer : waitingQueue) {
-                System.out.printf("-Waiter: Seat Customer %d\n", customer.getCustomerId());
+                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
             }
         }
         if (!seatedCustomers.isEmpty()) {
             displaySection("Take Order");
             for (Customer customer : seatedCustomers) {
-                System.out.printf("-Waiter: Take Order from Customer %d\n", customer.getCustomerId());
+                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
 
             }
         }
         if (!readyOrders.isEmpty()) {
             displaySection("Serve Order");
             for (Order order : readyOrders) {
-                System.out.printf("-Waiter: Serve Order to Customer %d\n", order.getCustomer().getCustomerId());
+                Customer customer = order.getCustomer();
+                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
             }
         }
-//        System.out.println("-Waiter: Wait");
         System.out.println(DIVIDER);
     }
 

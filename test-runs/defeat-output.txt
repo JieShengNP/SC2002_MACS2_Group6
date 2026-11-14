@@ -26,7 +26,7 @@ No active orders.
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 1
+Customer #1 | Satisfaction: 100
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -84,7 +84,7 @@ No active orders.
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 1
+Customer #1 | Satisfaction: 92
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -142,7 +142,7 @@ No active orders.
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 1
+Customer #1 | Satisfaction: 84
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -201,8 +201,8 @@ No active orders.
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 1
--Waiter: Seat Customer 2
+Customer #1 | Satisfaction: 76
+Customer #2 | Satisfaction: 100
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -261,8 +261,8 @@ No active orders.
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 1
--Waiter: Seat Customer 2
+Customer #1 | Satisfaction: 68
+Customer #2 | Satisfaction: 92
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -329,11 +329,11 @@ No active orders.
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 2
+Customer #2 | Satisfaction: 84
 
 TAKE ORDER
 ----------------------------------------
--Waiter: Take Order from Customer 1
+Customer #1 | Satisfaction: 60
 ----------------------------------------
 Available Actions: SEAT / TAKE / WAIT
 
@@ -403,7 +403,7 @@ Table #1 | Customer #1 | Satisfaction: 52 | Status: ORDERED
 
 ACTIVE ORDERS (1)
 ----------------------------------------
-Customer: 1 | Order: Pasta | PREPARING (1/2)
+Customer #1 | Order: Pasta | PREPARING (1/2)
 
 ========================================
              WAITER ACTIONS
@@ -411,8 +411,8 @@ Customer: 1 | Order: Pasta | PREPARING (1/2)
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 2
--Waiter: Seat Customer 3
+Customer #2 | Satisfaction: 76
+Customer #3 | Satisfaction: 100
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -474,7 +474,7 @@ Table #1 | Customer #1 | Satisfaction: 44 | Status: ORDERED
 
 ACTIVE ORDERS (1)
 ----------------------------------------
-Customer: 1 | Order: Pasta | READY 
+Customer #1 | Order: Pasta | READY 
 
 ========================================
              WAITER ACTIONS
@@ -482,12 +482,12 @@ Customer: 1 | Order: Pasta | READY
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 2
--Waiter: Seat Customer 3
+Customer #2 | Satisfaction: 68
+Customer #3 | Satisfaction: 92
 
 SERVE ORDER
 ----------------------------------------
--Waiter: Serve Order to Customer 1
+Customer #1 | Satisfaction: 44
 ----------------------------------------
 Available Actions: SEAT / SERVE / WAIT
 
@@ -554,8 +554,8 @@ No active orders.
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 2
--Waiter: Seat Customer 3
+Customer #2 | Satisfaction: 60
+Customer #3 | Satisfaction: 84
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -624,7 +624,7 @@ No active orders.
 
 TAKE ORDER
 ----------------------------------------
--Waiter: Take Order from Customer 2
+Customer #2 | Satisfaction: 52
 ----------------------------------------
 Available Actions: TAKE / WAIT
 
@@ -694,7 +694,7 @@ Table #2 | Customer #2 | Satisfaction: 44 | Status: ORDERED
 
 ACTIVE ORDERS (1)
 ----------------------------------------
-Customer: 2 | Order: Pasta | PREPARING (1/2)
+Customer #2 | Order: Pasta | PREPARING (1/2)
 
 ========================================
              WAITER ACTIONS
@@ -702,8 +702,8 @@ Customer: 2 | Order: Pasta | PREPARING (1/2)
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 3
--Waiter: Seat Customer 4
+Customer #3 | Satisfaction: 68
+Customer #4 | Satisfaction: 92
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -774,7 +774,7 @@ Table #2 | Customer #2 | Satisfaction: 36 | Status: ORDERED
 
 ACTIVE ORDERS (1)
 ----------------------------------------
-Customer: 2 | Order: Pasta | READY 
+Customer #2 | Order: Pasta | READY 
 
 ========================================
              WAITER ACTIONS
@@ -782,11 +782,11 @@ Customer: 2 | Order: Pasta | READY
 
 TAKE ORDER
 ----------------------------------------
--Waiter: Take Order from Customer 3
+Customer #3 | Satisfaction: 60
 
 SERVE ORDER
 ----------------------------------------
--Waiter: Serve Order to Customer 2
+Customer #2 | Satisfaction: 36
 ----------------------------------------
 Available Actions: TAKE / SERVE / WAIT
 
@@ -854,7 +854,7 @@ No active orders.
 
 TAKE ORDER
 ----------------------------------------
--Waiter: Take Order from Customer 3
+Customer #3 | Satisfaction: 52
 ----------------------------------------
 Available Actions: TAKE / WAIT
 
@@ -925,7 +925,7 @@ Table #2 | Customer #2 | Satisfaction: 36 | Status: READY_TO_PAY
 
 ACTIVE ORDERS (1)
 ----------------------------------------
-Customer: 3 | Order: Burger | READY 
+Customer #3 | Order: Burger | READY 
 
 ========================================
              WAITER ACTIONS
@@ -933,7 +933,7 @@ Customer: 3 | Order: Burger | READY
 
 SERVE ORDER
 ----------------------------------------
--Waiter: Serve Order to Customer 3
+Customer #3 | Satisfaction: 44
 ----------------------------------------
 Available Actions: SERVE / WAIT
 
@@ -1000,8 +1000,8 @@ No active orders.
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 4
--Waiter: Seat Customer 5
+Customer #4 | Satisfaction: 60
+Customer #5 | Satisfaction: 84
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -1070,7 +1070,7 @@ No active orders.
 
 TAKE ORDER
 ----------------------------------------
--Waiter: Take Order from Customer 4
+Customer #4 | Satisfaction: 52
 ----------------------------------------
 Available Actions: TAKE / WAIT
 
@@ -1140,7 +1140,7 @@ Table #2 | Customer #4 | Satisfaction: 44 | Status: ORDERED
 
 ACTIVE ORDERS (1)
 ----------------------------------------
-Customer: 4 | Order: Pasta | PREPARING (1/2)
+Customer #4 | Order: Pasta | PREPARING (1/2)
 
 ========================================
              WAITER ACTIONS
@@ -1148,8 +1148,8 @@ Customer: 4 | Order: Pasta | PREPARING (1/2)
 
 SEAT CUSTOMER
 ----------------------------------------
--Waiter: Seat Customer 5
--Waiter: Seat Customer 6
+Customer #5 | Satisfaction: 68
+Customer #6 | Satisfaction: 92
 ----------------------------------------
 Available Actions: SEAT / WAIT
 
@@ -1220,7 +1220,7 @@ Table #2 | Customer #4 | Satisfaction: 36 | Status: ORDERED
 
 ACTIVE ORDERS (1)
 ----------------------------------------
-Customer: 4 | Order: Pasta | READY 
+Customer #4 | Order: Pasta | READY 
 
 ========================================
              WAITER ACTIONS
@@ -1228,11 +1228,11 @@ Customer: 4 | Order: Pasta | READY
 
 TAKE ORDER
 ----------------------------------------
--Waiter: Take Order from Customer 5
+Customer #5 | Satisfaction: 60
 
 SERVE ORDER
 ----------------------------------------
--Waiter: Serve Order to Customer 4
+Customer #4 | Satisfaction: 36
 ----------------------------------------
 Available Actions: TAKE / SERVE / WAIT
 
