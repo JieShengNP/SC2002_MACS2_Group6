@@ -13,24 +13,24 @@ public abstract class Customer {
     protected CustomerStatus status;
     protected Table table;
     protected MenuItem menuItem;
-    protected int satisfaction_loss_rate;
+    protected int satisfactionLossRate;
 
-    public Customer(int customerId, int satisfaction, int satisfaction_loss_rate, List<MenuItem> menuItemList, Random random) {
+    public Customer(int customerId, int satisfaction, int satisfactionLossRate, List<MenuItem> menuItemList, Random random) {
         this.customerId = customerId;
         this.satisfaction = satisfaction;
-        this.satisfaction_loss_rate = satisfaction_loss_rate;
+        this.satisfactionLossRate = satisfactionLossRate;
         this.status = CustomerStatus.WAITING;
 
         this.menuItem = menuItemList.get(random.nextInt(menuItemList.size()));
     }
 
-    public void updateSatisfaction(){
-        if (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED){
+    public void updateSatisfaction() {
+        if (status == CustomerStatus.WAITING || status == CustomerStatus.SEATED || status == CustomerStatus.ORDERED) {
             decreaseSatisfaction();
         }
     }
 
-    public boolean updateServePayState(){
+    public boolean updateServePayState() {
         if (status == CustomerStatus.SERVED) {
             status = CustomerStatus.EATING;
             return false;
@@ -41,7 +41,11 @@ public abstract class Customer {
         return false;
     }
 
-    public abstract void decreaseSatisfaction();
+    public void decreaseSatisfaction() {
+        satisfaction -= satisfactionLossRate;
+        if (satisfaction < 0)
+            satisfaction = 0;
+    }
 
     public int getSatisfaction() {
         return satisfaction;

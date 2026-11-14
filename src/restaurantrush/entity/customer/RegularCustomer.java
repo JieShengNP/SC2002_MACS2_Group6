@@ -11,10 +11,4 @@ public class RegularCustomer extends Customer {
         super(customerId, 100, 8, menuItemList, random);
     }
 
-    @Override
-    public void decreaseSatisfaction() {
-        satisfaction -= satisfaction_loss_rate;
-        if (satisfaction < 0)
-            satisfaction = 0;
-    }
 }
