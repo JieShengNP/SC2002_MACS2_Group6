@@ -229,4 +229,14 @@ public class Restaurant {
         }
         return readyOrders;
     }
+
+    public int getTotalLeftCustomers(){
+        int count = 0;
+        for (Customer customer : customers){
+            if (customer.getStatus() == CustomerStatus.LEFT){
+                count++;
+            }
+        }
+        return count;
+    }
 }

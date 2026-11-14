@@ -51,17 +51,17 @@ Choose Chef Action:
            END OF TURN 1 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           0
-Unhappy Departures:         0
-Current Revenue:            $0
-Average Paid Satisfaction:  N/A
-Turns Used:                 1
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 1
 ========================================
 
 Press ENTER to continue...
@@ -128,17 +128,17 @@ Choose Customer:
            END OF TURN 2 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           0
-Unhappy Departures:         0
-Current Revenue:            $0
-Average Paid Satisfaction:  N/A
-Turns Used:                 2
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 2
 ========================================
 
 Press ENTER to continue...
@@ -193,17 +193,17 @@ Choose Customer:
            END OF TURN 3 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           0
-Unhappy Departures:         0
-Current Revenue:            $0
-Average Paid Satisfaction:  N/A
-Turns Used:                 3
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 3
 ========================================
 
 Press ENTER to continue...
@@ -263,17 +263,17 @@ Choose Chef Action:
            END OF TURN 4 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           0
-Unhappy Departures:         0
-Current Revenue:            $0
-Average Paid Satisfaction:  N/A
-Turns Used:                 4
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 4
 ========================================
 
 Press ENTER to continue...
@@ -329,17 +329,17 @@ Choose Chef Action:
            END OF TURN 5 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           0
-Unhappy Departures:         0
-Current Revenue:            $0
-Average Paid Satisfaction:  N/A
-Turns Used:                 5
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       0
+Total Unhappy Departures:   0
+Current Revenue:            $0
+Average Paid Satisfaction:  N/A
+Turns Used:                 5
 ========================================
 
 Press ENTER to continue...
@@ -407,17 +407,17 @@ Choose Customer:
            END OF TURN 6 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           1
-Unhappy Departures:         0
-Current Revenue:            $18
-Average Paid Satisfaction:  76.00
-Turns Used:                 6
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   0
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+Turns Used:                 6
 ========================================
 
 Press ENTER to continue...
@@ -484,17 +484,17 @@ Choose Customer:
            END OF TURN 7 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           1
-Unhappy Departures:         0
-Current Revenue:            $18
-Average Paid Satisfaction:  76.00
-Turns Used:                 7
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   0
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+Turns Used:                 7
 ========================================
 
 Press ENTER to continue...
@@ -555,17 +555,17 @@ Choose Chef Action:
            END OF TURN 8 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           1
-Unhappy Departures:         0
-Current Revenue:            $18
-Average Paid Satisfaction:  76.00
-Turns Used:                 8
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   0
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+Turns Used:                 8
 ========================================
 
 Press ENTER to continue...
@@ -633,17 +633,17 @@ Choose Customer:
            END OF TURN 9 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           1
-Unhappy Departures:         0
-Current Revenue:            $18
-Average Paid Satisfaction:  76.00
-Turns Used:                 9
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       1
+Total Unhappy Departures:   0
+Current Revenue:            $18
+Average Paid Satisfaction:  76.00
+Turns Used:                 9
 ========================================
 
 Press ENTER to continue...
@@ -700,17 +700,17 @@ Choose Chef Action:
           END OF TURN 10 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           2
-Unhappy Departures:         0
-Current Revenue:            $36
-Average Paid Satisfaction:  72.00
-Turns Used:                 10
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       2
+Total Unhappy Departures:   0
+Current Revenue:            $36
+Average Paid Satisfaction:  72.00
+Turns Used:                 10
 ========================================
 
 Press ENTER to continue...
@@ -766,17 +766,17 @@ Choose Chef Action:
           END OF TURN 11 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           2
-Unhappy Departures:         0
-Current Revenue:            $36
-Average Paid Satisfaction:  72.00
-Turns Used:                 11
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       2
+Total Unhappy Departures:   0
+Current Revenue:            $36
+Average Paid Satisfaction:  72.00
+Turns Used:                 11
 ========================================
 
 Press ENTER to continue...
@@ -844,17 +844,17 @@ Choose Customer:
           END OF TURN 12 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           3
-Unhappy Departures:         0
-Current Revenue:            $51
-Average Paid Satisfaction:  73.33
-Turns Used:                 12
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       3
+Total Unhappy Departures:   0
+Current Revenue:            $51
+Average Paid Satisfaction:  73.33
+Turns Used:                 12
 ========================================
 
 Press ENTER to continue...
@@ -921,17 +921,17 @@ Choose Customer:
           END OF TURN 13 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           3
-Unhappy Departures:         0
-Current Revenue:            $51
-Average Paid Satisfaction:  73.33
-Turns Used:                 13
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       3
+Total Unhappy Departures:   0
+Current Revenue:            $51
+Average Paid Satisfaction:  73.33
+Turns Used:                 13
 ========================================
 
 Press ENTER to continue...
@@ -992,17 +992,17 @@ Choose Chef Action:
           END OF TURN 14 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           3
-Unhappy Departures:         0
-Current Revenue:            $51
-Average Paid Satisfaction:  73.33
-Turns Used:                 14
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       3
+Total Unhappy Departures:   0
+Current Revenue:            $51
+Average Paid Satisfaction:  73.33
+Turns Used:                 14
 ========================================
 
 Press ENTER to continue...
@@ -1070,17 +1070,17 @@ Choose Customer:
           END OF TURN 15 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           3
-Unhappy Departures:         0
-Current Revenue:            $51
-Average Paid Satisfaction:  73.33
-Turns Used:                 15
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       3
+Total Unhappy Departures:   0
+Current Revenue:            $51
+Average Paid Satisfaction:  73.33
+Turns Used:                 15
 ========================================
 
 Press ENTER to continue...
@@ -1137,17 +1137,17 @@ Choose Chef Action:
           END OF TURN 16 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           4
-Unhappy Departures:         0
-Current Revenue:            $69
-Average Paid Satisfaction:  72.00
-Turns Used:                 16
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       4
+Total Unhappy Departures:   0
+Current Revenue:            $69
+Average Paid Satisfaction:  72.00
+Turns Used:                 16
 ========================================
 
 Press ENTER to continue...
@@ -1203,17 +1203,17 @@ Choose Chef Action:
           END OF TURN 17 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           4
-Unhappy Departures:         0
-Current Revenue:            $69
-Average Paid Satisfaction:  72.00
-Turns Used:                 17
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       4
+Total Unhappy Departures:   0
+Current Revenue:            $69
+Average Paid Satisfaction:  72.00
+Turns Used:                 17
 ========================================
 
 Press ENTER to continue...
@@ -1281,17 +1281,17 @@ Choose Customer:
           END OF TURN 18 / 18
 ========================================
 
-TURN SUMMARY
-----------------------------------------
-Customers Served:           5
-Unhappy Departures:         0
-Current Revenue:            $78
-Average Paid Satisfaction:  72.80
-Turns Used:                 18
-
 CUSTOMERS WHO LEFT
 ----------------------------------------
 No customers left.
+
+GAME SUMMARY
+----------------------------------------
+Total Customers Paid:       5
+Total Unhappy Departures:   0
+Current Revenue:            $78
+Average Paid Satisfaction:  72.80
+Turns Used:                 18
 ========================================
 
 Press ENTER to continue...

@@ -93,13 +93,7 @@ public class RestaurantCLI {
 
     public void displayEndTurnStats(Restaurant restaurant, int turnNumber) {
         displayHeader(String.format("END OF TURN %d / %d", turnNumber, GameController.MAX_TURNS));
-        displaySection("Turn Summary");
-        displayStatistic("Customers Served", String.valueOf(restaurant.getPaidCustomer().size()));
         List<Customer> leavingCustomers = restaurant.removeLeavingCustomers();
-        displayStatistic("Unhappy Departures", leavingCustomers.isEmpty() ? "0" : String.valueOf(leavingCustomers.size()));
-        displayStatistic("Current Revenue", "$" + (restaurant.getRevenue() % 100 == 0 ? (restaurant.getRevenue() / 100) : String.format("%.2f", (restaurant.getRevenue() * 0.01f))));
-        displayStatistic("Average Paid Satisfaction", Double.isNaN(restaurant.getPaidAverageSatisfaction()) ? "N/A" : String.format("%.2f", restaurant.getPaidAverageSatisfaction()));
-        displayStatistic("Turns Used", String.valueOf(turnNumber));
         displaySection("Customers Who Left");
         if (leavingCustomers.isEmpty()) {
             System.out.println("No customers left.");
@@ -108,6 +102,13 @@ public class RestaurantCLI {
                 System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
             }
         }
+        displaySection("Game Summary");
+        displayStatistic("Total Customers Paid", String.valueOf(restaurant.getPaidCustomer().size()));
+        displayStatistic("Total Unhappy Departures", String.valueOf(restaurant.getTotalLeftCustomers()));
+        displayStatistic("Current Revenue", "$" + (restaurant.getRevenue() % 100 == 0 ? (restaurant.getRevenue() / 100) : String.format("%.2f", (restaurant.getRevenue() * 0.01f))));
+        displayStatistic("Average Paid Satisfaction", Double.isNaN(restaurant.getPaidAverageSatisfaction()) ? "N/A" : String.format("%.2f", restaurant.getPaidAverageSatisfaction()));
+        displayStatistic("Turns Used", String.valueOf(turnNumber));
+
         System.out.println(LINE);
     }
 
