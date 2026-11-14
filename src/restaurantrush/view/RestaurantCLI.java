@@ -105,7 +105,7 @@ public class RestaurantCLI {
             System.out.println("No customers left.");
         } else {
             for (Customer customer : leavingCustomers) {
-                System.out.printf("Customer #%d | Satisfaction: %d", customer.getCustomerId(), customer.getSatisfaction());
+                System.out.printf("Customer #%d | Satisfaction: %d\n", customer.getCustomerId(), customer.getSatisfaction());
             }
         }
         System.out.println(LINE);
