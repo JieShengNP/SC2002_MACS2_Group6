@@ -159,7 +159,7 @@ public class Restaurant {
         if (customer != null){
             Order order = getCustomerOrder(customer);
             if (order != null) {
-                addRevenue(((order.getMenuItem().getPrice() / 100 )* customer.getPaymentPercentage()));
+                addRevenue(((order.getMenuItem().getPrice() * customer.getPaymentPercentage()) / 100));
                 customer.setStatus(CustomerStatus.PAID);
                 order.markPaid();
                 Table table = customer.getTable();

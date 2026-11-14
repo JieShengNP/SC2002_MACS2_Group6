@@ -1,5 +1,6 @@
 package restaurantrush.entity.customer;
 
+import restaurantrush.entity.menu.ComboMeal;
 import restaurantrush.entity.menu.MenuItem;
 import restaurantrush.entity.restaurant.Table;
 import restaurantrush.enums.CustomerStatus;
@@ -21,7 +22,32 @@ public abstract class Customer {
         this.satisfactionLossRate = satisfactionLossRate;
         this.status = CustomerStatus.WAITING;
 
-        this.menuItem = menuItemList.get(random.nextInt(menuItemList.size()));
+        this.menuItem = chooseRandomFood(menuItemList, random);
+    }
+
+    private MenuItem chooseRandomFood(List<MenuItem> menuItemList, Random random) {
+        int roll = random.nextInt(100);
+
+        if (roll < 75) {
+            return menuItemList.get(random.nextInt(menuItemList.size()));
+        } else {
+            MenuItem item1 = menuItemList.get(random.nextInt(menuItemList.size()));
+            MenuItem item2 = menuItemList.get(random.nextInt(menuItemList.size()));
+            while (item2 == item1) {
+                item2 = menuItemList.get(random.nextInt(menuItemList.size()));
+            }
+            int price = 0;
+            int preperationUnit = 0;
+
+            price += item1.getPrice();
+            price += item2.getPrice();
+            price = (price * 90) / 100;
+
+            preperationUnit += item1.getPreparationUnit();
+            preperationUnit += item2.getPreparationUnit();
+            String name = String.format("Combo Meal (%s + %s)", item1.getName(), item2.getName());
+            return new ComboMeal(name, price, preperationUnit);
+        }
     }
 
     public void updateSatisfaction() {
@@ -79,7 +105,7 @@ public abstract class Customer {
         return 100;
     }
 
-    public boolean isUnsatisfied(){
+    public boolean isUnsatisfied() {
         return satisfaction <= 0;
     }
 
