@@ -5,10 +5,7 @@ import restaurantrush.entity.menu.Burger;
 import restaurantrush.entity.menu.MenuItem;
 import restaurantrush.entity.menu.Pasta;
 import restaurantrush.entity.menu.Salad;
-import restaurantrush.entity.staff.Cashier;
-import restaurantrush.entity.staff.Chef;
-import restaurantrush.entity.staff.Staff;
-import restaurantrush.entity.staff.Waiter;
+import restaurantrush.entity.staff.*;
 import restaurantrush.enums.CustomerStatus;
 import restaurantrush.enums.OrderStatus;
 
@@ -38,7 +35,7 @@ public class Restaurant {
         );
 
         paymentQueue = new LinkedList<>();
-        staffList = List.of(new Waiter(), new Chef(), new Cashier());
+        staffList = List.of(new Host(), new Waiter(), new Chef(), new Cashier());
     }
 
     public List<Customer> getCustomers() {

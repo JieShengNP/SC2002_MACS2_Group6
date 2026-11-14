@@ -195,6 +195,16 @@ public class RestaurantCLI {
             displayInvalidChoice();
         }
     }
+    public void displayHostActions(List<Customer> waitingQueue, boolean haveEmptySeat) {
+        displayHeader("HOST ACTIONS");
+        if (haveEmptySeat) {
+            displaySection("Seat Customer");
+            for (Customer customer : waitingQueue) {
+                System.out.printf("Customer #%d (%s) | Satisfaction: %d\n", customer.getCustomerId(), customer.getCustomerType(), customer.getSatisfaction());
+            }
+        }
+        System.out.println(DIVIDER);
+    }
 
     public void displayWaiterActions(List<Customer> waitingQueue, List<Customer> seatedCustomers, List<Order> readyOrders, boolean haveEmptySeat) {
         displayHeader("WAITER ACTIONS");
