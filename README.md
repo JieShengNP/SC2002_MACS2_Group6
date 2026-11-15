@@ -21,6 +21,7 @@ Players manage restaurant operations across 18 turns by controlling staff, prior
 # Table of Contents
 * [Stage Evolution](#stage-evolution)
 * [Project Structure](#project-structure)
+* [Diagrams](#diagrams)
 * [Running the Program](#running-the-program)
 * [Assumptions](#assumptions)
 * [Design Considerations](#design-considerations)
@@ -138,6 +139,18 @@ src/
 - view/
   - RestaurantCLI.java
 - Main.java
+
+---
+
+# Diagrams
+
+## Class Diagram
+
+- The class diagrams of `stage-1`, `stage-2` and `stage-3` can be found under `diagrams\SC2002 Restaurant Rush Class Diagrams.pdf`
+
+## Sequence Diagram
+
+- The sequence diagram of a `stage-3` scenario where a VIP customer, that arrives in Turn 4, with Happy Hour not yet activated, and ordering a dish with 1 preparation unit (e.g. Burger), can be found under `diagrams\Stage 3 sequence diagram.pdf`
 
 ---
 
