@@ -2,10 +2,12 @@
 
 ## SC2002-MACS2-Group6
 ## Team Members
-- LEE XING YI SARAH
-- QIN YUXI EILEEN
-- TAN JIE SHENG
-- XAVIER TAN YI-EN
+| Name | Matric No |
+| --- | ---|
+| LEE XING YI SARAH | U2540546B |
+| QIN YUXI EILEEN | U2540685L |
+| TAN JIE SHENG | U2540156A|
+| XAVIER TAN YI-EN | U2540425G |
 
 ---
 # Restaurant Rush
