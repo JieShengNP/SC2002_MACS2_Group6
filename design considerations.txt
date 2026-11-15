@@ -12,8 +12,9 @@
 
 7. VIP discount is applied first, followed by the Happy Hour. Price is locked when the order is taken. A VIP Burger during Happy Hour costs 1500 x 0.9 x 0.8 = 1080 cents, displayed as $10.80.
 
-8. Happy Hour can be activated once at turn start and lasts for that turn and the next. During each active turn, WAITING, SEATED and ORDERED customers gain 15 satisfaction, capped at 100. This includes customers whose food is READY but has not been served. SERVED, EATING, READY_TO_PAY, PAID and LEFT customers are excluded. Existing order prices remain fixed.
+8.Happy Hour can be activated once at turn start and lasts for that turn and the next. During each active turn, WAITING, SEATED and ORDERED customers gain 15 satisfaction at the start of the turn, capped at 100 (customer satisfaction still decreases as per normal at the end of the turn if still WAITING, SEATED or ORDERED). This includes customers whose food is READY but has not been served. SERVED, EATING, READY_TO_PAY, PAID and LEFT customers are excluded. Existing order prices remain fixed.
 - Activating Happy Hour when several eligible customers have low satisfaction provides greater recovery, while those already at 100 gain nothing. However, new orders receive a 20% discount, reducing revenue per order. The player must therefore balance satisfaction recovery against the revenue target when choosing when to activate it.
+
 
 9. The Host acts before the Waiter in Stage 3. This lets the Host seat a customer and the Waiter take that customer's order in the same turn. The Waiter still retains the option to seat. Each staff object gets one performTask call per turn, and the input loops allow retries without spending a task.
 
