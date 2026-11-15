@@ -308,6 +308,7 @@ public class RestaurantCLI {
             } else if (choice.equalsIgnoreCase("N")){
                 return false;
             }
+            displayInvalidChoice();
         }
     }
 }
