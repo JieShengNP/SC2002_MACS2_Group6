@@ -48,6 +48,22 @@ Players manage restaurant operations across 18 turns by controlling staff, prior
 | TurnController.java | Support arrival and processing of VIP and Critic customers.| Allow generation of VIP and Critic Customer in the queue.|
 | RestaurantCLI.java | Updated exiting prints to identify Customer type. | Provide customer-type information to support managerial decision-making.|
 
+### Files Unchanged
+- `controller/GameController.java`
+- `entity/menu/Burger.java`
+- `entity/menu/MenuItem.java`
+- `entity/menu/Pasta.java`
+- `entity/menu/Salad.java`
+- `entity/restaurant/Order.java`
+- `entity/restaurant/Table.java`
+- `entity/restaurant/WaitingQueue.java`
+- `entity/staff/Cashier.java`
+- `entity/staff/Chef.java`
+- `entity/staff/Staff.java`
+- `entity/staff/Waiter.java`
+- `enums/CustomerStatus.java`
+- `enums/OrderStatus.java`
+
 ### Files Removed
 
 None.
@@ -66,14 +82,14 @@ Stage 2 extends the customer hierarchy through inheritance by introducing VIPCus
 
 ## Stage 2 → Stage 3
 
-### New Files Added
+### New Classes Added
 
 | File | Reason |
 |--------|--------|
 | Host.java | Added a new staff role responsible for seating customers. |
 | ComboMeal.java | Introduced ComboMeal menu item composed from two randomly selected menu items.|
 
-### Existing Files Modified
+### Existing Classes Modified
 
 | File | Changes | Reason |
 |--------|--------|--------|
@@ -82,6 +98,24 @@ Stage 2 extends the customer hierarchy through inheritance by introducing VIPCus
 | Restaurant.java | Extended restaurant operations to support Host actions and Happy Hour state management.| Support Stage 3 gameplay mechanics while maintaining existing restaurant operations.|
 | TurnController.java | Updated turn flow to add Happy Hour.| Allow manager to trigger Happy Hour, if it is available.|
 | RestaurantCLI.java | Updated exiting prints to include Host actions and option to enable Happy Hour.| Allow manager to have control Host as well as enable Happy Hour.|
+
+### Files Unchanged
+- `controller/GameController.java`
+- `entity/customer/RegularCustomer.java`
+- `entity/customer/CriticCustomer.java`
+- `entity/customer/VIPCustomer.java`
+- `entity/menu/Burger.java`
+- `entity/menu/MenuItem.java`
+- `entity/menu/Pasta.java`
+- `entity/menu/Salad.java`
+- `entity/restaurant/Table.java`
+- `entity/restaurant/WaitingQueue.java`
+- `entity/staff/Cashier.java`
+- `entity/staff/Chef.java`
+- `entity/staff/Staff.java`
+- `entity/staff/Waiter.java`
+- `enums/CustomerStatus.java`
+- `enums/OrderStatus.java`
 
 ### Files Removed
 
