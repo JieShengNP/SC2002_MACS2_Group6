@@ -83,7 +83,7 @@ Stage 3 introduces new gameplay features through extension of the existing desig
 ### Relevant Git History
 
 - Stage 2 Commit: `1f6c6e6ed4ba495685d7a13aea50fac3753a83bf`
-- Stage 3 Commit: `41df4ba7576f1e72e20eb97959073b8f02669f11`
+- Stage 3 Commit: `6686c08cadb39b2b08f9cb75dfa9f86b3a1ffd83`
 - Compare Link: `https://github.com/JieShengNP/SC2002_MACS2_Group6/compare/stage-2...stage-3`
 
 ---
